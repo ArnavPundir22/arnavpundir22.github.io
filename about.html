@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Arnav</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<style>/* Base styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 100;
+}
+
+nav h1 {
+  font-size: 2rem;
+  color: white;
+}
+#nav-links li a.active {
+  color: #4acfee; /* Highlight color */
+  position: relative;
+}
+
+#nav-links li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #4acfee;
+  border-radius: 2px;
+}
+#nav-links li a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background-color: #4acfee;
+  transition: width 0.3s ease-in-out;
+}
+
+#nav-links li a:hover::after {
+  width: 100%;
+}
+
+#nav-links li a:hover {
+  color: #4acfee;
+}
+
+
+/* Navigation links */
+#nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+#nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  #nav-links.show {
+    display: flex;
+  }
+
+  #nav-links li {
+    margin: 10px 0;
+  }
+}
+</style>
+
+ <video autoplay loop muted plays-inline class="back-vid">
+    <source src="images/galaxy.mp4" type="video/mp4">
+  </video>
+
+  <section class="main-section">
+   <nav>
+  <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Ar</span>nav.</h1>
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class='bx bx-menu'></i>
+  </div>
+  <ul id="nav-links">
+    <li><a  href="index.html">Home </a></li>
+    <li><a class="active" href="about.html">About</a></li>
+    <li><a href="project.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="contact.html">Contact Me</a></li>
+  </ul>
+</nav>
+
+    <div class="hero about-section">
+      <div class="hero-info">
+        <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="600">About Me</h1>
+        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+          Hello! I'm <strong>Arnav Pundir</strong>, a passionate Computer Science student and emerging <strong>AI & Computer Vision Engineer</strong>.
+          I specialize in building intelligent systems that blend creativity with logic, whether it's a voice-powered desktop assistant, an emotion-based music recommender, or a facial recognition attendance tracker.<br><br>
+
+          With a strong foundation in Python, C++, Java, and frameworks like <strong>PyQt5</strong>, I enjoy transforming complex problems into real-world, interactive solutions.
+          My projects reflect a love for innovation and deep curiosity about how machines can better understand and assist humans.<br><br>
+
+          Outside of coding, I constantly explore the latest advancements in AI, computer vision, and human-computer interaction.
+          My mission is to engineer systems that are not only functional but meaningful and futuristic.<br><br>
+
+          Let’s connect, collaborate, and innovate together!
+        </p>
+
+        <div class="Buttons" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="1000">
+          <a href="contact.html" class="btn">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="info-sec" style="margin-top: 40px; justify-content: center;">
+        <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1100">
+          <h1>1+</h1>
+          <p>Year of <br> Experience</p>
+        </div>
+        <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1200">
+          <h1>7+</h1>
+          <p>Technical <br> Skills</p>
+        </div>
+        <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1300">
+          <h1>5+</h1>
+          <p>Projects <br> Completed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+    <script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
+
