@@ -1,172 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - Arnav</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Arnav Pundir</title>
   <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="style.css" />
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-<style>/* Base styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  position: relative;
-  z-index: 100;
-}
 
-nav h1 {
-  font-size: 2rem;
-  color: white;
-}
-#nav-links li a.active {
-  color: #4acfee; /* Highlight color */
-  position: relative;
-}
-
-#nav-links li a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background: #4acfee;
-  border-radius: 2px;
-}
-#nav-links li a {
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-#nav-links li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background-color: #4acfee;
-  transition: width 0.3s ease-in-out;
-}
-
-#nav-links li a:hover::after {
-  width: 100%;
-}
-
-#nav-links li a:hover {
-  color: #4acfee;
-}
-
-
-/* Navigation links */
-#nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-#nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2.5rem;
-  color: white;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-/* Mobile view */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  #nav-links {
-    position: absolute;
-    top: 80px;
-    right: 30px;
-    background-color: rgba(0, 0, 0, 0.95);
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-  }
-
-  #nav-links.show {
-    display: flex;
-  }
-
-  #nav-links li {
-    margin: 10px 0;
-  }
-}
-</style>
-  <video autoplay loop muted plays-inline class="back-vid">
+  <video autoplay loop muted playsinline class="back-vid">
     <source src="images/galaxy.mp4" type="video/mp4">
   </video>
 
   <section class="main-section">
-   <nav>
-  <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Ar</span>nav.</h1>
-  <div class="hamburger" onclick="toggleMenu()">
-    <i class='bx bx-menu'></i>
-  </div>
-  <ul id="nav-links">
-    <li><a href="index.html">Home </a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="project.html">Projects</a></li>
-    <li><a href="skills.html">Skills</a></li>
-    <li><a class="active" href="#">Contact Me</a></li>
-  </ul>
-</nav>
-    <section id="contact" class="contact-section" data-aos="fade-up" data-aos-duration="1000">
-      <div class="contact-form">
-        <h2>Let's Connect</h2>
-        <p>Have a question or a project idea? Send me a message!</p>
+
+    <!-- NAV -->
+    <nav>
+      <h1 data-aos="zoom-in" data-aos-duration="900">
+        <span style="color:#4acfee;">Ar</span>nav.
+      </h1>
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <i class="bx bx-menu"></i>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- CONTACT -->
+    <div class="contact-wrapper" data-aos="fade-up" data-aos-duration="800">
+
+      <!-- FORM -->
+      <div class="contact-form-card">
+        <div class="contact-header">
+          <h2>Let's <span class="gradient-text">Connect</span></h2>
+          <p>Have a project idea or want to collaborate? Drop me a message
+             and I'll get back to you as soon as possible!</p>
+        </div>
 
         <form action="https://formsubmit.co/arnavp128@gmail.com" method="POST">
-          <input type="hidden" name="_confirmation" value="Thanks! We received your message.">
+          <input type="hidden" name="_confirmation" value="Thanks! I received your message.">
+          <input type="hidden" name="_captcha" value="false">
+
           <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" name="name" required>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
           </div>
 
           <div class="form-group">
-            <label>Your Email</label>
-            <input type="email" name="email" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required>
           </div>
 
           <div class="form-group">
-            <label>Your Message</label>
-            <textarea name="message" required></textarea>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message"
+                      placeholder="Tell me about your project or idea..." required></textarea>
           </div>
 
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="submit" class="submit-btn">
+            <i class="bx bx-send"></i> &nbsp;Send Message
+          </button>
         </form>
       </div>
-    </section>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+
+        <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:4px;">
+          Get in Touch
+        </h3>
+        <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:8px;">
+          I'm open to freelance projects, collaborations, and opportunities.
+        </p>
+
+        <a class="contact-info-card" href="mailto:arnavp128@gmail.com">
+          <i class="bx bxl-gmail"></i>
+          <div>
+            <div class="info-label">Email</div>
+            <div class="info-value">arnavp128@gmail.com</div>
+          </div>
+        </a>
+
+        <a class="contact-info-card" href="tel:+917060675133">
+          <i class="bx bx-phone-call"></i>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value">+91 70606 75133</div>
+          </div>
+        </a>
+
+        <a class="contact-info-card"
+           href="https://github.com/ArnavPundir22"
+           target="_blank" rel="noopener">
+          <i class="bx bxl-github"></i>
+          <div>
+            <div class="info-label">GitHub</div>
+            <div class="info-value">ArnavPundir22</div>
+          </div>
+        </a>
+
+        <a class="contact-info-card"
+           href="https://www.linkedin.com/in/arnav-pundir128ap"
+           target="_blank" rel="noopener">
+          <i class="bx bxl-linkedin"></i>
+          <div>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-value">arnav-pundir128ap</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
   </section>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>AOS.init();</script>
-    <script>
-  function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-  }
-</script>
-
+  <script>
+    AOS.init({ once: true });
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
-
