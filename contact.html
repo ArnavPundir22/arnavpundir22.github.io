@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Arnav Pundir</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <video autoplay loop muted playsinline class="back-vid">
-    <source src="images/galaxy.mp4" type="video/mp4">
-  </video>
-
   <section class="main-section">
 
     <!-- NAV -->
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="900">
+      <h1>
         <span style="color:#4acfee;">Ar</span>nav.
       </h1>
       <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -35,10 +32,10 @@
     </nav>
 
     <!-- CONTACT -->
-    <div class="contact-wrapper" data-aos="fade-up" data-aos-duration="800">
+    <div class="contact-wrapper">
 
       <!-- FORM -->
-      <div class="contact-form-card">
+      <div class="contact-form-card reveal d1">
         <div class="contact-header">
           <h2>Let's <span class="gradient-text">Connect</span></h2>
           <p>Have a project idea or want to collaborate? Drop me a message
@@ -72,12 +69,12 @@
       </div>
 
       <!-- CONTACT INFO -->
-      <div class="contact-info" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+      <div class="contact-info reveal-left d2">
 
         <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:4px;">
           Get in Touch
         </h3>
-        <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:8px;">
+        <p style="font-size:0.82rem;color:var(--muted);margin-bottom:8px;">
           I'm open to freelance projects, collaborations, and opportunities.
         </p>
 
@@ -122,9 +119,7 @@
 
   </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');
     }
