@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects — Arnav Pundir</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <video autoplay loop muted playsinline class="back-vid">
-    <source src="images/galaxy.mp4" type="video/mp4">
-  </video>
-
   <section class="main-section">
 
     <!-- NAV -->
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="900">
+      <h1>
         <span style="color:#4acfee;">Ar</span>nav.
       </h1>
       <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -36,13 +33,13 @@
 
     <!-- PROJECTS -->
     <div class="projects-wrapper">
-      <h2 class="section-title gradient-text" data-aos="fade-up" data-aos-duration="800">
+      <h2 class="section-title gradient-text reveal d1">
         My Projects
       </h2>
 
       <div class="projects-grid">
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
+        <div class="project-card reveal d2">
           <h3>Face Recognition Attendance Web System</h3>
           <p>A web-based system that automates attendance using face recognition for accurate,
              fast, and proxy-free record management.</p>
@@ -53,7 +50,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">
+        <div class="project-card reveal d2">
           <h3>DocBot</h3>
           <p>Summarizes web documentation and answers questions using the Gemini API. Built
              with PyQt5 GUI, handles live content extraction and NLP-based Q&amp;A.</p>
@@ -64,7 +61,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="150">
+        <div class="project-card reveal d3">
           <h3>Voice2Code — Codio</h3>
           <p>AI-powered tool that converts spoken programming instructions into executable
              code in real time.</p>
@@ -75,7 +72,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+        <div class="project-card reveal d3">
           <h3>Air-Mouse</h3>
           <p>Controls the mouse with hand gestures — no physical mouse or trackpad needed —
              using Python and OpenCV.</p>
@@ -86,7 +83,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="250">
+        <div class="project-card reveal d4">
           <h3>Face Detector (C++)</h3>
           <p>Detects faces in images using Haar Cascade Classifiers with OpenCV in C++,
              highlighting detected faces with bounding boxes.</p>
@@ -97,7 +94,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+        <div class="project-card reveal d4">
           <h3>Devin — Desktop Voice Assistant</h3>
           <p>Python-based voice assistant with system and media control capabilities, built
              using PyQt5 and speech recognition.</p>
@@ -108,7 +105,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="350">
+        <div class="project-card reveal d5">
           <h3>EmotionMusicApp</h3>
           <p>Plays songs based on the user's detected emotion using DeepFace and PyQt5.
              Webcam-based mood detection with smart audio selection.</p>
@@ -119,7 +116,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+        <div class="project-card reveal d5">
           <h3>Face Attendance System</h3>
           <p>Facial recognition system using blink detection, OpenCV, and a PyQt5 GUI.
              Prevents duplicate entries and logs attendance time.</p>
@@ -130,7 +127,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="450">
+        <div class="project-card reveal d6">
           <h3>Smart Women Safety App</h3>
           <p>Web app for location sharing and SOS triggering for women's safety.
              Built with Flask and integrates maps &amp; alert systems.</p>
@@ -141,7 +138,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+        <div class="project-card reveal d6">
           <h3>Students Grievance Support System</h3>
           <p>Anonymous portal for secure grievance submission, empowering students to
              report issues freely and confidentially.</p>
@@ -152,7 +149,7 @@
           </a>
         </div>
 
-        <div class="project-card" data-aos="fade-up" data-aos-duration="700" data-aos-delay="550">
+        <div class="project-card reveal d7">
           <h3>Anti-Spoofing System</h3>
           <p>Real-time liveness detection using OpenCV and TensorFlow to prevent spoofing
              in facial authentication systems.</p>
@@ -168,9 +165,7 @@
 
   </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');
     }

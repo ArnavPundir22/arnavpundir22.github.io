@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Arnav Pundir</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <video autoplay loop muted playsinline class="back-vid">
-    <source src="images/galaxy.mp4" type="video/mp4">
-  </video>
-
   <section class="main-section">
 
     <!-- NAV -->
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="900">
+      <h1>
         <span style="color:#4acfee;">Ar</span>nav.
       </h1>
       <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -37,7 +34,7 @@
     <!-- ABOUT -->
     <div class="about-wrapper">
 
-      <div class="about-content" data-aos="fade-right" data-aos-duration="900">
+      <div class="about-content reveal-right d1">
         <h1>
           About <span class="gradient-text">Me</span>
         </h1>
@@ -70,7 +67,7 @@
         </div>
       </div>
 
-      <div class="about-highlights" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+      <div class="about-highlights reveal-left d2">
         <div class="highlight-card">
           <span class="h-number gradient-text">1+</span>
           <span class="h-label">Year of Experience</span>
@@ -93,9 +90,7 @@
 
   </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');
     }

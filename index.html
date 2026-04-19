@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arnav Pundir — Portfolio</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <video autoplay loop muted playsinline class="back-vid">
-    <source src="images/galaxy.mp4" type="video/mp4">
-  </video>
-
   <section class="main-section">
 
     <!-- NAV -->
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="900">
+      <h1 class="reveal d1">
         <span style="color:#4acfee;">Ar</span>nav.
       </h1>
       <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -38,28 +35,27 @@
     <div class="hero-section">
 
       <div class="hero-info">
-        <p class="hero-greeting" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
+        <p class="hero-greeting reveal-right d2">
           Welcome to my portfolio
         </p>
-        <h1 data-aos="fade-right" data-aos-duration="900" data-aos-delay="500">
+        <h1 class="reveal-right d3">
           Hi, I'm<br>Arnav Pundir
         </h1>
-        <h2 class="gradient-text" data-aos="fade-left" data-aos-duration="800" data-aos-delay="700">
+        <h2 class="gradient-text reveal-left d4">
           <span id="typed-text"></span><span class="cursor-blink"></span>
         </h2>
-        <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
+        <p class="reveal d5">
           Passionate Computer Science student and aspiring AI developer. I build
           intelligent systems — from voice assistants to emotion-based music apps and
           facial recognition pipelines — using Python, C++, Java, and modern frameworks.
         </p>
-        <div class="hero-actions" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1100">
+        <div class="hero-actions reveal d6">
           <a href="Documents/ArnavPundir_BuildingWithAI.pdf" download class="btn">
             <i class="bx bx-download"></i> Download CV
           </a>
           <a href="contact.html" class="btn btn-outline">Get In Touch</a>
         </div>
-        <div class="social-icons" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1300"
-             style="margin-top:22px;">
+        <div class="social-icons reveal d7">
           <a href="https://github.com/ArnavPundir22" target="_blank" rel="noopener" title="GitHub">
             <i class="bx bxl-github"></i>
           </a>
@@ -75,28 +71,26 @@
         </div>
       </div>
 
-      <div class="hero-image" data-aos="zoom-in-left" data-aos-duration="1200" data-aos-delay="400">
+      <div class="hero-image reveal-left d3">
         <div class="hero-image-inner">
           <img src="images/man1.png" alt="Arnav Pundir">
         </div>
-        <span class="ring ring-1"></span>
-        <span class="ring ring-2"></span>
-        <span class="ring ring-3"></span>
+        <div class="hero-glow"></div>
       </div>
 
     </div>
 
     <!-- STATS -->
     <div class="stats-section">
-      <div class="stat-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="1400">
+      <div class="stat-item reveal d7">
         <span class="stat-number gradient-text" data-target="1">0+</span>
         <span class="stat-label">Year of Experience</span>
       </div>
-      <div class="stat-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="1500">
+      <div class="stat-item reveal d8">
         <span class="stat-number gradient-text" data-target="7">0+</span>
         <span class="stat-label">Technical Skills</span>
       </div>
-      <div class="stat-item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="1600">
+      <div class="stat-item reveal d9">
         <span class="stat-number gradient-text" data-target="8">0+</span>
         <span class="stat-label">Projects Completed</span>
       </div>
@@ -104,10 +98,7 @@
 
   </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
-
     /* ── Hamburger ── */
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');

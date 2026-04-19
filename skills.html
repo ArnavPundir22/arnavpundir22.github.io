@@ -5,21 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills — Arnav Pundir</title>
   <link rel="icon" href="images/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <video autoplay loop muted playsinline class="back-vid">
-    <source src="images/galaxy.mp4" type="video/mp4">
-  </video>
-
   <section class="main-section">
 
     <!-- NAV -->
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="900">
+      <h1>
         <span style="color:#4acfee;">Ar</span>nav.
       </h1>
       <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
@@ -35,7 +32,7 @@
     </nav>
 
     <!-- SKILLS -->
-    <div class="skills-wrapper" data-aos="fade-up" data-aos-duration="800">
+    <div class="skills-wrapper reveal d1">
       <h2 class="section-title gradient-text">My Skills</h2>
 
       <div class="filter-buttons">
@@ -114,10 +111,7 @@
 
   </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    AOS.init({ once: true });
-
     function toggleMenu() {
       document.getElementById('nav-links').classList.toggle('show');
     }
