@@ -237,6 +237,7 @@ export const certifications = [
     badge: 'google',
     description: 'Foundational concepts of large language models, generative AI applications, and responsible AI practices.',
     color: '#4285F4',
+    verificationUrl: 'https://www.cloudskillsboost.google/public_profiles/completions',
   },
   {
     title: 'Prompt Engineering with GitHub Copilot',
@@ -244,6 +245,7 @@ export const certifications = [
     badge: 'github',
     description: 'AI-assisted development workflows, effective prompt engineering, and productivity with Copilot in real codebases.',
     color: '#6e40c9',
+    verificationUrl: 'https://learn.microsoft.com/en-us/collections/kkqrhmxoqn54',
   },
   {
     title: 'Azure AI Vision',
@@ -251,5 +253,6 @@ export const certifications = [
     badge: 'microsoft',
     description: 'Object detection, OCR, face recognition, and deployment of AI vision solutions on Azure cloud.',
     color: '#00a4ef',
+    verificationUrl: 'https://learn.microsoft.com/en-us/training/browse/?products=azure',
   },
 ]

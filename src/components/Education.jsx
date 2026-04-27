@@ -148,9 +148,17 @@ export default function Education() {
                     <h4 className="font-semibold text-white text-sm leading-snug group-hover:text-accent transition-colors">
                       {cert.title}
                     </h4>
-                    <p className="text-xs font-medium mt-1 mb-2" style={{ color: cert.color }}>
+                  <div className="mt-2 flex items-center gap-3 flex-wrap">
+                    <p className="text-xs font-medium" style={{ color: cert.color }}>
                       {cert.issuer}
                     </p>
+                    {cert.verificationUrl && (
+                      <a href={cert.verificationUrl} target="_blank" rel="noopener noreferrer"
+                         className="text-xs text-[#94a3b8] hover:text-accent transition-colors underline-offset-2 underline">
+                        Verify ↗
+                      </a>
+                    )}
+                  </div>
                     <p className="text-[#94a3b8] text-xs leading-relaxed">{cert.description}</p>
                   </div>
                 </motion.div>
