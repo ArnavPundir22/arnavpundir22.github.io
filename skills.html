@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills — Arnav Pundir</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <section class="main-section">
+
+    <!-- NAV -->
+    <nav>
+      <h1>
+        <span style="color:#4acfee;">Ar</span>nav.
+      </h1>
+      <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <i class="bx bx-menu"></i>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a class="active" href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- SKILLS -->
+    <div class="skills-wrapper reveal d1">
+      <h2 class="section-title gradient-text">My Skills</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="language">Languages</button>
+        <button class="filter-btn" data-filter="framework">Frameworks</button>
+        <button class="filter-btn" data-filter="domain">Domains</button>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-card language"
+             data-info="Face Recognition System, Emotion Music App, System Automation">
+          <i class="bx bxl-python"></i> Python
+        </div>
+        <div class="skill-card language"
+             data-info="Academic Projects, Android Development Basics">
+          <i class="bx bxl-java"></i> Java
+        </div>
+        <div class="skill-card language"
+             data-info="C++ Face Detection Project">
+          <i class="bx bxl-c-plus-plus"></i> C++
+        </div>
+        <div class="skill-card language"
+             data-info="Portfolio Website, Safety Web App">
+          <i class="bx bxl-javascript"></i> JavaScript
+        </div>
+        <div class="skill-card language"
+             data-info="Portfolio, Web UI for Projects">
+          <i class="bx bx-code-alt"></i> HTML &amp; CSS
+        </div>
+
+        <!-- Frameworks -->
+        <div class="skill-card framework"
+             data-info="GUI for AI Assistant 'Devin', Emotion Music App">
+          <i class="bx bx-desktop"></i> PyQt5
+        </div>
+        <div class="skill-card framework"
+             data-info="Face Recognition, AntiSpoofing, Gesture Recognition">
+          <i class="bx bx-video-recording"></i> OpenCV
+        </div>
+        <div class="skill-card framework"
+             data-info="Emotion Detection and AntiSpoofing System">
+          <i class="bx bxl-tux"></i> TensorFlow
+        </div>
+        <div class="skill-card framework"
+             data-info="Blink-based Verification for Attendance System">
+          <i class="bx bx-bot"></i> cvzone
+        </div>
+        <div class="skill-card framework"
+             data-info="Object Detection in AntiSpoofing System">
+          <i class="bx bxs-analyse"></i> YOLOv8
+        </div>
+        <div class="skill-card framework"
+             data-info="Face Landmark Detection for Blink Verification">
+          <i class="bx bx-face"></i> dlib
+        </div>
+
+        <!-- Domains -->
+        <div class="skill-card domain"
+             data-info="Face Recognition, Emotion Detection, AntiSpoofing Projects">
+          <i class="bx bxs-brain"></i> AI &amp; Computer Vision
+        </div>
+        <div class="skill-card domain"
+             data-info="AI Assistant 'Devin', Attendance System GUI, Music Player">
+          <i class="bx bx-laptop"></i> Desktop Applications
+        </div>
+        <div class="skill-card domain"
+             data-info="Voice-Controlled Assistant 'Devin' (volume, brightness, media)">
+          <i class="bx bx-cog"></i> System Automation
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-links').classList.toggle('show');
+    }
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.skill-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          card.style.display =
+            filter === 'all' || card.classList.contains(filter) ? 'inline-flex' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

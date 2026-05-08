@@ -1,0 +1,276 @@
+export const profile = {
+  name: 'Arnav Pundir',
+  tagline: 'AI & Full-Stack Engineer',
+  location: 'Roorkee, India',
+  email: 'arnavp128@gmail.com',
+  phone: '+91 70606 75133',
+  github: 'https://github.com/ArnavPundir22',
+  linkedin: 'https://www.linkedin.com/in/arnav-pundir128ap',
+  cvUrl: '/Documents/ArnavPundir_BuildingWithAI.pdf',
+  photo: '/images/man1.png',
+  bio: [
+    "I build end-to-end AI-powered systems with a focus on computer vision. I've developed a face recognition-based attendance platform that handles encoding optimization, multi-face detection, and scalable UI workflows.",
+    "I work across backend (Flask, REST APIs), frontend (React.js, Tailwind CSS), and model integration (YOLOv8, InsightFace, TensorFlow), and I focus on improving both accuracy and usability through iterative system design.",
+    "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC ’26), currently contributing to real open-source projects in a mentor-guided community.",
+    "Accepted into GirlScript Summer of Code 2026 (GSSoC ’26) as Contributor / Mentee in the Open Source Track, with contributions beginning from 15 May 2026.",
+    "Currently pursuing B.Tech in Computer Science and Engineering at COER University, Roorkee.",
+  ],
+  stats: [
+    { value: 15, suffix: '+', label: 'Projects Built' },
+    { value: 2, suffix: '+', label: 'Years Coding' },
+    { value: 10, suffix: '+', label: 'Tech Stacks' },
+    { value: 5, suffix: '', label: 'Certifications' },
+  ],
+}
+
+export const roles = [
+  'AI & Computer Vision Engineer',
+  'Full-Stack Web Developer',
+  'Python & Flask Developer',
+  'React.js Developer',
+  'Open-Source Builder',
+]
+
+export const skills = {
+  Languages: [
+    { name: 'Python', level: 90 },
+    { name: 'JavaScript', level: 80 },
+    { name: 'Java', level: 65 },
+    { name: 'C++', level: 60 },
+    { name: 'SQL', level: 70 },
+    { name: 'HTML & CSS', level: 85 },
+  ],
+  Frontend: [
+    { name: 'React.js', level: 78 },
+    { name: 'Tailwind CSS', level: 80 },
+    { name: 'Responsive Web Design', level: 85 },
+    { name: 'PyQt5 (Desktop GUI)', level: 75 },
+  ],
+  Backend: [
+    { name: 'Flask', level: 82 },
+    { name: 'REST APIs', level: 78 },
+    { name: 'MySQL', level: 68 },
+    { name: 'PostgreSQL', level: 62 },
+  ],
+  'AI / CV': [
+    { name: 'OpenCV', level: 88 },
+    { name: 'YOLOv8', level: 80 },
+    { name: 'TensorFlow / Keras', level: 72 },
+    { name: 'InsightFace / dlib', level: 75 },
+    { name: 'MediaPipe', level: 72 },
+    { name: 'DeepFace', level: 68 },
+  ],
+  Tools: [
+    { name: 'Git & GitHub', level: 85 },
+    { name: 'VS Code', level: 90 },
+    { name: 'Render / Netlify', level: 65 },
+    { name: 'Azure AI Vision', level: 60 },
+  ],
+}
+
+export const projects = [
+  {
+    id: 1,
+    title: 'Face Recognition Attendance Web System',
+    description:
+      'Full-stack web app using Flask backend with InsightFace encoding pipeline. Automates attendance via group photo upload, multi-face detection, confidence scores, and structured CSV logs.',
+    tags: ['Python', 'Flask', 'InsightFace', 'HTML/CSS', 'OpenCV'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/Face-Attendance-System-Web-Version',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 2,
+    title: 'SevaSetu — Service Booking Platform',
+    description:
+      'Real-world client service website built with React.js and Flask backend. Delivered a fully responsive booking platform with smooth navigation, REST API integration, and live deployment.',
+    tags: ['React.js', 'Flask', 'Tailwind CSS', 'REST API', 'MySQL'],
+    category: 'Full-Stack',
+    github: 'https://github.com/ArnavPundir22/SevaSetu',
+    live: 'https://sevasetu.app',
+    featured: true,
+  },
+  {
+    id: 3,
+    title: 'Traffic Analysis System',
+    description:
+      'Real-time traffic monitoring using YOLOv8 for vehicle detection and counting. Supports multi-class detection, lane analysis, and generates structured traffic flow reports.',
+    tags: ['Python', 'YOLOv8', 'OpenCV', 'TensorFlow'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/Traffic_analysis-system',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 4,
+    title: 'DocBot — AI Documentation Assistant',
+    description:
+      'Summarizes web documentation and answers natural language questions using the Gemini API. Built with PyQt5 GUI, handling live content extraction and NLP-based Q&A.',
+    tags: ['Python', 'PyQt5', 'Gemini API', 'NLP'],
+    category: 'AI / NLP',
+    github: 'https://github.com/ArnavPundir22/DocBot',
+    live: null,
+    featured: true,
+  },
+  {
+    id: 5,
+    title: 'Anti-Spoofing System',
+    description:
+      'Real-time liveness detection using OpenCV and TensorFlow/YOLOv8 to prevent spoofing attacks in facial authentication systems. Detects printed photos and screen replays.',
+    tags: ['Python', 'TensorFlow', 'YOLOv8', 'OpenCV'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/Anti-Spoofing-',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 6,
+    title: 'Air-Mouse — Gesture Control',
+    description:
+      'Controls the mouse with hand gestures — no physical device needed. Uses MediaPipe hand landmark detection and Python for real-time cursor control, click, and scroll actions.',
+    tags: ['Python', 'MediaPipe', 'OpenCV', 'PyAutoGUI'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/Air-Mouse',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 7,
+    title: 'Devin — Desktop Voice Assistant',
+    description:
+      'Python-based AI voice assistant with system and media control. Built with PyQt5 GUI, speech recognition, and text-to-speech for hands-free PC interaction.',
+    tags: ['Python', 'PyQt5', 'Speech Recognition', 'TTS'],
+    category: 'AI / NLP',
+    github: 'https://github.com/ArnavPundir22/Devin-Personal-Desktop-Voice-Assistant',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 8,
+    title: 'ASL Translator',
+    description:
+      'American Sign Language translator using CNN models for real-time gesture classification from webcam feed. Converts hand signs to text with high accuracy.',
+    tags: ['Python', 'CNN', 'OpenCV', 'TensorFlow'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/ASL-translator',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 9,
+    title: 'Voice2Code — Codio',
+    description:
+      'AI-powered tool that converts spoken programming instructions into executable code in real time. Bridges voice interface with code generation using NLP pipelines.',
+    tags: ['Python', 'NLP', 'Speech Recognition', 'Code Gen'],
+    category: 'AI / NLP',
+    github: 'https://github.com/ArnavPundir22/Voice2Code-Codio',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 10,
+    title: 'Emotion Music App',
+    description:
+      'Plays songs based on the user\'s detected emotion using DeepFace and PyQt5. Webcam-based mood detection with intelligent audio selection for personalized music playback.',
+    tags: ['Python', 'DeepFace', 'PyQt5', 'OpenCV'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/EmotionMusicApp',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 11,
+    title: 'Smart Women Safety App',
+    description:
+      'Web app for real-time location sharing and SOS triggering. Built with Flask backend, integrates maps and instant alert systems for emergency response.',
+    tags: ['Flask', 'JavaScript', 'Maps API', 'Python'],
+    category: 'Full-Stack',
+    github: 'https://github.com/ArnavPundir22/Smart-Women-Safety-App',
+    live: null,
+    featured: false,
+  },
+  {
+    id: 12,
+    title: 'Surgical Tool Detection',
+    description:
+      'YOLO-based detection of surgical instruments in laparoscopy videos. Supports real-time inference on medical video streams for operating room assistance.',
+    tags: ['Python', 'YOLOv8', 'OpenCV', 'Medical AI'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/Surgical-Tool-Detection-in-laparoscopy-video',
+    live: null,
+    featured: false,
+  },
+]
+
+export const projectCategories = ['All', 'AI / CV', 'Full-Stack', 'AI / NLP']
+
+export const education = [
+  {
+    degree: 'Bachelor of Technology — Computer Science & Engineering',
+    institution: 'COER University',
+    location: 'Roorkee, India',
+    period: '2024 – 2028',
+    current: true,
+    description: 'Focused on AI, computer vision, full-stack development, and software engineering. Building production-grade projects alongside academics.',
+  },
+  {
+    degree: 'Senior Secondary — PCM (Class XII)',
+    institution: 'Atal Utkrisht Gov. Inter College',
+    location: 'Roorkee, India',
+    period: '2022 – 2024',
+    current: false,
+    description: 'Physics, Chemistry, Mathematics stream with strong foundation in analytical thinking.',
+  },
+  {
+    degree: 'Secondary School (Class X)',
+    institution: 'Montfort Sen. Sec. School',
+    location: 'Roorkee, India',
+    period: '2022',
+    current: false,
+    description: null,
+  },
+]
+
+export const certifications = [
+  {
+    title: 'GirlScript Summer of Code 2026 — Accepted (Contributor / Mentee)',
+    issuer: 'GirlScript Summer of Code (GSSoC)',
+    badge: 'github',
+    description: 'Accepted in GSSoC 2026 Open Source Track as Contributor / Mentee; official contribution period starts 15 May 2026.',
+    color: '#ec4899',
+    verificationUrl: 'https://gssoc.girlscript.tech/',
+  },
+  {
+    title: 'Nexus Spring of Code 2026 — Contributor',
+    issuer: 'Nexus Spring of Code (NSoC)',
+    badge: 'github',
+    description: 'Selected contributor for NSoC ’26, actively working on open-source projects with mentors and community collaboration.',
+    color: '#8b5cf6',
+    verificationUrl: 'https://drive.google.com/drive/folders/1Y9uOCb0bdL6XBZF77tvt6ZTIpuessB5h',
+  },
+  {
+    title: 'Introduction to Generative AI',
+    issuer: 'Google',
+    badge: 'google',
+    description: 'Foundational concepts of large language models, generative AI applications, and responsible AI practices.',
+    color: '#4285F4',
+    verificationUrl: 'https://www.cloudskillsboost.google/public_profiles/completions',
+  },
+  {
+    title: 'Prompt Engineering with GitHub Copilot',
+    issuer: 'GitHub',
+    badge: 'github',
+    description: 'AI-assisted development workflows, effective prompt engineering, and productivity with Copilot in real codebases.',
+    color: '#6e40c9',
+    verificationUrl: 'https://learn.microsoft.com/en-us/collections/kkqrhmxoqn54',
+  },
+  {
+    title: 'Azure AI Vision',
+    issuer: 'Microsoft Learn',
+    badge: 'microsoft',
+    description: 'Object detection, OCR, face recognition, and deployment of AI vision solutions on Azure cloud.',
+    color: '#00a4ef',
+    verificationUrl: 'https://learn.microsoft.com/en-us/training/browse/?products=azure',
+  },
+]
