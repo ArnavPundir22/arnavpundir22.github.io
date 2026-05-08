@@ -6,7 +6,7 @@ export const profile = {
   phone: '+91 70606 75133',
   github: 'https://github.com/ArnavPundir22',
   linkedin: 'https://www.linkedin.com/in/arnav-pundir128ap',
-  cvUrl: '/Documents/ArnavPundir_BuildingWithAI.pdf',
+  cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
     "I build end-to-end AI-powered systems with a focus on computer vision. I've developed a face recognition-based attendance platform that handles encoding optimization, multi-face detection, and scalable UI workflows.",
