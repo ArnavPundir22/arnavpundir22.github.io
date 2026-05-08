@@ -28,6 +28,7 @@ jobs:
 
       - name: Deploy built files to root
         run: |
+          rm -rf assets
           cp -r dist/assets ./assets
           cp dist/index.html ./index.html
           touch .nojekyll
