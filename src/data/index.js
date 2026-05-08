@@ -11,13 +11,14 @@ export const profile = {
   bio: [
     "I build end-to-end AI-powered systems with a focus on computer vision. I've developed a face recognition-based attendance platform that handles encoding optimization, multi-face detection, and scalable UI workflows.",
     "I work across backend (Flask, REST APIs), frontend (React.js, Tailwind CSS), and model integration (YOLOv8, InsightFace, TensorFlow), and I focus on improving both accuracy and usability through iterative system design.",
+    "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC ’26), currently contributing to real open-source projects in a mentor-guided community.",
     "Currently pursuing B.Tech in Computer Science and Engineering at COER University, Roorkee.",
   ],
   stats: [
     { value: 15, suffix: '+', label: 'Projects Built' },
     { value: 2, suffix: '+', label: 'Years Coding' },
     { value: 10, suffix: '+', label: 'Tech Stacks' },
-    { value: 2, suffix: '', label: 'Certifications' },
+    { value: 4, suffix: '', label: 'Certifications' },
   ],
 }
 
@@ -231,6 +232,14 @@ export const education = [
 ]
 
 export const certifications = [
+  {
+    title: 'Nexus Spring of Code 2026 — Contributor',
+    issuer: 'Nexus Spring of Code (NSoC)',
+    badge: 'github',
+    description: 'Selected contributor for NSoC ’26, actively working on open-source projects with mentors and community collaboration.',
+    color: '#8b5cf6',
+    verificationUrl: 'https://drive.google.com/drive/folders/1Y9uOCb0bdL6XBZF77tvt6ZTIpuessB5h',
+  },
   {
     title: 'Introduction to Generative AI',
     issuer: 'Google',
