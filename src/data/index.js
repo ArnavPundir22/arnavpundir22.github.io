@@ -12,13 +12,14 @@ export const profile = {
     "I build end-to-end AI-powered systems with a focus on computer vision. I've developed a face recognition-based attendance platform that handles encoding optimization, multi-face detection, and scalable UI workflows.",
     "I work across backend (Flask, REST APIs), frontend (React.js, Tailwind CSS), and model integration (YOLOv8, InsightFace, TensorFlow), and I focus on improving both accuracy and usability through iterative system design.",
     "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC ’26), currently contributing to real open-source projects in a mentor-guided community.",
+    "Accepted into GirlScript Summer of Code 2026 (GSSoC ’26) as Contributor / Mentee in the Open Source Track, with contributions beginning from 15 May 2026.",
     "Currently pursuing B.Tech in Computer Science and Engineering at COER University, Roorkee.",
   ],
   stats: [
     { value: 15, suffix: '+', label: 'Projects Built' },
     { value: 2, suffix: '+', label: 'Years Coding' },
     { value: 10, suffix: '+', label: 'Tech Stacks' },
-    { value: 4, suffix: '', label: 'Certifications' },
+    { value: 5, suffix: '', label: 'Certifications' },
   ],
 }
 
@@ -232,6 +233,14 @@ export const education = [
 ]
 
 export const certifications = [
+  {
+    title: 'GirlScript Summer of Code 2026 — Accepted (Contributor / Mentee)',
+    issuer: 'GirlScript Summer of Code (GSSoC)',
+    badge: 'github',
+    description: 'Accepted in GSSoC 2026 Open Source Track as Contributor / Mentee; official contribution period starts 15 May 2026.',
+    color: '#ec4899',
+    verificationUrl: 'https://gssoc.girlscript.tech/',
+  },
   {
     title: 'Nexus Spring of Code 2026 — Contributor',
     issuer: 'Nexus Spring of Code (NSoC)',
