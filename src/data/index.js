@@ -201,6 +201,16 @@ export const projects = [
     live: null,
     featured: false,
   },
+  {
+    id: 13,
+    title: 'Air-Kalam',
+    description: 'Project repository and live demo for Air-Kalam.',
+    tags: ['Web App', 'Vercel'],
+    category: 'Full-Stack',
+    github: 'https://github.com/ArnavPundir22/Air-Kalam',
+    live: 'https://air-kalam-7w7q.vercel.app/',
+    featured: false,
+  },
 ]
 
 export const projectCategories = ['All', 'AI / CV', 'Full-Stack', 'AI / NLP']
