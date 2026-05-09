@@ -239,7 +239,7 @@ export const certifications = [
     badge: 'github',
     description: 'Accepted in GSSoC 2026 Open Source Track as Contributor / Mentee; official contribution period starts 15 May 2026.',
     color: '#ec4899',
-    verificationUrl: 'https://gssoc.girlscript.tech/',
+    verificationUrl: 'https://gssoc.girlscript.org/profile/9d938472-12fc-4980-bbdb-ee3f137552f0',
   },
   {
     title: 'Nexus Spring of Code 2026 — Contributor',
@@ -255,7 +255,7 @@ export const certifications = [
     badge: 'google',
     description: 'Foundational concepts of large language models, generative AI applications, and responsible AI practices.',
     color: '#4285F4',
-    verificationUrl: 'https://www.cloudskillsboost.google/public_profiles/completions',
+    verificationUrl: 'https://drive.google.com/file/d/1OUU8nCSkueaeqoJyA0rbvZGWvDGdsPbs/view?usp=drive_link',
   },
   {
     title: 'Prompt Engineering with GitHub Copilot',
@@ -263,7 +263,7 @@ export const certifications = [
     badge: 'github',
     description: 'AI-assisted development workflows, effective prompt engineering, and productivity with Copilot in real codebases.',
     color: '#6e40c9',
-    verificationUrl: 'https://learn.microsoft.com/en-us/collections/kkqrhmxoqn54',
+    verificationUrl: 'https://drive.google.com/file/d/1wjDyDttna5Z6ThdY7aGrTEk_trS5SV69/view?usp=drive_link',
   },
   {
     title: 'Azure AI Vision',
@@ -271,6 +271,6 @@ export const certifications = [
     badge: 'microsoft',
     description: 'Object detection, OCR, face recognition, and deployment of AI vision solutions on Azure cloud.',
     color: '#00a4ef',
-    verificationUrl: 'https://learn.microsoft.com/en-us/training/browse/?products=azure',
+    verificationUrl: 'https://learn.microsoft.com/en-us/users/arnavpundir-7070/achievements?tab=tab-learning-paths',
   },
 ]
