@@ -204,10 +204,10 @@ export const projects = [
   {
     id: 13,
     title: 'Air-Kalam',
-    description: 'Project repository and live demo for Air-Kalam.',
+    description: 'Gesture-controlled virtual whiteboard',
     tags: ['Web App', 'Vercel'],
     category: 'Full-Stack',
-    github: 'https://github.com/ArnavPundir22/Air-Kalam',
+    github: 'https://github.com/ArnavPundir22/Air-Kalam-',
     live: 'https://air-kalam-7w7q.vercel.app/',
     featured: false,
   },
