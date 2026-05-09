@@ -73,16 +73,23 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CV Button */}
-        <a href="/Documents/ArnavPundir_BuildingWithAI.pdf" download
+        {/* Resume Buttons */}
+        <a href="/Documents/Arnav_Pundir_Resume.pdf" download
            className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold
-                      bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-90 transition-opacity
-                      shadow-[0_0_24px_rgba(99,102,241,0.4)]">
+                       bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-90 transition-opacity
+                       shadow-[0_0_24px_rgba(99,102,241,0.4)]">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
               d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
-          Download CV
+          Download Resume
+        </a>
+        <a href="/Documents/Arnav%20Pundir%20(Web%20Developer).pdf" download
+           aria-label="Download Web Development Resume PDF"
+           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold
+                      border border-[rgba(99,102,241,0.35)] text-[#f1f5f9]
+                      hover:border-accent hover:bg-[rgba(99,102,241,0.08)] transition-all duration-200">
+          Web Development Resume
         </a>
 
         {/* Hamburger */}
@@ -115,9 +122,14 @@ export default function Navbar() {
                   {label}
                 </a>
               ))}
-              <a href="/Documents/ArnavPundir_BuildingWithAI.pdf" download
+              <a href="/Documents/Arnav_Pundir_Resume.pdf" download
                  className="mt-2 text-center py-3 px-4 rounded-full text-sm font-semibold bg-gradient-to-r from-accent to-accent2 text-white">
-                Download CV
+                Download Resume
+              </a>
+              <a href="/Documents/Arnav%20Pundir%20(Web%20Developer).pdf" download
+                 aria-label="Download Web Development Resume PDF"
+                 className="text-center py-3 px-4 rounded-full text-sm font-semibold border border-[rgba(99,102,241,0.35)] text-[#f1f5f9] hover:border-accent hover:bg-[rgba(99,102,241,0.08)] transition-all duration-200">
+                Web Development Resume
               </a>
             </div>
           </motion.div>
