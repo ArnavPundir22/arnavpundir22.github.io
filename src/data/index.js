@@ -204,7 +204,7 @@ export const projects = [
   {
     id: 13,
     title: 'Air-Kalam',
-    description: 'Gesture-controlled virtual whiteboard',
+    description: 'Hand Guesture controlled whiteboard pen. use hand guesture to write/ draw without using any mouse or writting pad, just by moving fingers in front of the camera.',
     tags: ['Web App', 'Vercel'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/Air-Kalam-',
