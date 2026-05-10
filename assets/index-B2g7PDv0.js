@@ -73,3 +73,4 @@ Error generating stack: `+e.message+`
                           border border-[rgba(99,102,241,0.2)] text-[#475569]
                           hover:text-accent hover:border-accent
                           transition-colors duration-200`,children:n},t))})]})})}function au(){return(0,w.jsxs)(`div`,{style:{background:`#060a14`},children:[(0,w.jsx)(kl,{}),(0,w.jsxs)(`main`,{children:[(0,w.jsx)(Vl,{}),(0,w.jsx)(Wl,{}),(0,w.jsx)(ql,{}),(0,w.jsx)(Zl,{}),(0,w.jsx)(eu,{}),(0,w.jsx)(ru,{})]}),(0,w.jsx)(iu,{})]})}Dl.createRoot(document.getElementById(`root`)).render((0,w.jsx)(x.StrictMode,{children:(0,w.jsx)(au,{})}));
+
