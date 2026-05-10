@@ -79,6 +79,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Face-Attendance-System-Web-Version',
     live: null,
     featured: true,
+    image: '/images/insight-attend.png',
+    imageAlt: 'InsightAttend — AI-Powered Smart Attendance System dashboard and face recognition demo',
   },
   {
     id: 2,
