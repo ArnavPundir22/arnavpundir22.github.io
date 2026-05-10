@@ -79,6 +79,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Face-Attendance-System-Web-Version',
     live: null,
     featured: true,
+    image: '/images/insight-attend.png',
   },
   {
     id: 2,

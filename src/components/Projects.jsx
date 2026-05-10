@@ -26,10 +26,25 @@ function ProjectCard({ project, i }) {
     <motion.div ref={ref}
       initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, ease: 'easeOut', delay: (i % 3) * 0.1 }}
-      className="glass-card p-6 flex flex-col gap-4 group
+      className="glass-card flex flex-col gap-4 group overflow-hidden
                  hover:border-[rgba(99,102,241,0.3)]
                  hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)]
                  transition-all duration-300">
+
+      {/* Project background image banner */}
+      {project.image && (
+        <div className="w-full h-44 overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover object-center
+                       group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+      )}
+
+      {/* Card body */}
+      <div className="p-6 flex flex-col gap-4 flex-1">
 
       {/* Category badge */}
       <div className="flex items-center justify-between">
@@ -82,6 +97,7 @@ function ProjectCard({ project, i }) {
             Live Demo
           </a>
         )}
+      </div>
       </div>
     </motion.div>
   )
