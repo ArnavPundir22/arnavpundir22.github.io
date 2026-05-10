@@ -36,7 +36,7 @@ function ProjectCard({ project, i }) {
         <div className="w-full h-44 overflow-hidden">
           <img
             src={project.image}
-            alt={project.title}
+            alt={project.imageAlt || project.title}
             className="w-full h-full object-cover object-center
                        group-hover:scale-105 transition-transform duration-500"
           />
