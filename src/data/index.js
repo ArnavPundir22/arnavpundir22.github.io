@@ -9,17 +9,11 @@ export const profile = {
   cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
-    "I’m a developer and AI enthusiast focused on building practical, high-impact systems that combine machine learning, modern web technologies, and real-world usability. My work revolves around turning ideas into deployable products — from AI-powered attendance systems and computer vision applications to full-stack web platforms, automation tools, and intelligent web experiences.",
-
-"I enjoy solving problems through technology and turning complex ideas into systems people can actually use. Most of my learning comes from hands-on experimentation: building projects from scratch, debugging real-world issues, optimizing performance, and continuously improving products through iteration. I prefer learning by creating rather than only consuming theory, which is why I spend most of my time working on projects, exploring new technologies, and testing new ideas.",
-
-"My technical interests include Artificial Intelligence, Machine Learning, Computer Vision, Full-Stack Development, Cloud Deployment, and scalable software systems. I’m particularly interested in the growing intersection between AI and product engineering — building systems that are not just technically functional, but also intelligent, efficient, and user-focused.",
-
-"Alongside development, I actively participate in open-source contributions, research work, technical communities, and collaborative projects that help me expand both my technical and problem-solving abilities. I’ve also been involved in research presentations and technical events that exposed me to how technology can create impact beyond just code.",
-
-"What drives me most is the process of continuous growth — becoming better at building, thinking, and solving difficult problems. I’m constantly looking for opportunities to challenge myself, work on meaningful projects, and develop skills that create long-term impact in the field of technology.",
-
-"Currently, my focus is on advancing my expertise in AI engineering, full-stack development, scalable applications, and building products that combine innovation with real-world value."
+    "I build end-to-end AI-powered systems with a focus on computer vision. I've developed a face recognition-based attendance platform that handles encoding optimization, multi-face detection, and scalable UI workflows.",
+    "I work across backend (Flask, REST APIs), frontend (React.js, Tailwind CSS), and model integration (YOLOv8, InsightFace, TensorFlow), and I focus on improving both accuracy and usability through iterative system design.",
+    "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC ’26), currently contributing to real open-source projects in a mentor-guided community.",
+    "Accepted into GirlScript Summer of Code 2026 (GSSoC ’26) as Contributor / Mentee in the Open Source Track, with contributions beginning from 15 May 2026.",
+    "Currently pursuing B.Tech in Computer Science and Engineering at COER University, Roorkee.",
   ],
   stats: [
     { value: 15, suffix: '+', label: 'Projects Built' },
