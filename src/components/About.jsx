@@ -53,14 +53,18 @@ export default function About() {
             ))}
 
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#contact"
+              <motion.a href="#contact"
+                 whileHover={{ scale: 1.05, y: -2 }}
+                 whileTap={{ scale: 0.95 }}
                  onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
                  className="px-6 py-3 rounded-full text-sm font-semibold text-white
                             bg-gradient-to-r from-accent to-accent2
                             hover:opacity-90 transition-opacity shadow-[0_0_24px_rgba(99,102,241,0.3)]">
                 Let's Connect
-              </a>
-              <a href="/Documents/Arnav_Pundir_Resume.pdf" download
+              </motion.a>
+              <motion.a href="/Documents/Arnav_Pundir_Resume.pdf" download
+                 whileHover={{ scale: 1.05, y: -2 }}
+                 whileTap={{ scale: 0.95 }}
                  className="px-6 py-3 rounded-full text-sm font-semibold text-[#f1f5f9]
                             border border-[rgba(99,102,241,0.35)]
                             hover:border-accent hover:bg-[rgba(99,102,241,0.08)]
@@ -70,8 +74,10 @@ export default function About() {
                     d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 Download Resume
-              </a>
-              <a href="/Documents/Arnav%20Pundir%20(Web%20Developer).pdf" download
+              </motion.a>
+              <motion.a href="/Documents/Arnav%20Pundir%20(Web%20Developer).pdf" download
+                 whileHover={{ scale: 1.05, y: -2 }}
+                 whileTap={{ scale: 0.95 }}
                  className="px-6 py-3 rounded-full text-sm font-semibold text-[#f1f5f9]
                             border border-[rgba(99,102,241,0.35)]
                             hover:border-accent hover:bg-[rgba(99,102,241,0.08)]
@@ -81,7 +87,7 @@ export default function About() {
                     d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
                 Web Dev Resume
-              </a>
+              </motion.a>
             </div>
           </motion.div>
 
@@ -98,8 +104,9 @@ export default function About() {
             ].map(({ icon, label, value, sub }) => (
               <motion.div key={label}
                 variants={fadeUp(0)}
-                className="glass-card p-5 hover:border-[rgba(99,102,241,0.3)] transition-all duration-300
-                           hover:shadow-[0_8px_32px_rgba(99,102,241,0.12)]">
+                whileHover={{ y: -6, scale: 1.02, borderColor: 'rgba(99,102,241,0.3)', boxShadow: '0 12px 32px rgba(99,102,241,0.12)' }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                className="glass-card p-5 cursor-pointer">
                 <div className="text-2xl mb-3">{icon}</div>
                 <p className="text-xs text-[#94a3b8] uppercase tracking-wide mb-1">{label}</p>
                 <p className="font-semibold text-white text-sm leading-snug">{value}</p>
@@ -109,15 +116,18 @@ export default function About() {
 
             {/* What I do */}
             <motion.div variants={fadeUp(0)}
-              className="col-span-2 glass-card p-5 hover:border-[rgba(99,102,241,0.3)] transition-all duration-300">
+              whileHover={{ y: -4, scale: 1.01, borderColor: 'rgba(99,102,241,0.3)', boxShadow: '0 8px 32px rgba(99,102,241,0.08)' }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="col-span-2 glass-card p-5 cursor-pointer">
               <p className="text-xs text-[#94a3b8] uppercase tracking-wide mb-3">Core Domains</p>
               <div className="flex flex-wrap gap-2">
                 {['Computer Vision', 'Face Recognition', 'YOLOv8 / Object Detection', 'Flask APIs', 'React.js', 'ML Pipelines', 'Desktop GUIs'].map(t => (
-                  <span key={t}
-                    className="px-3 py-1 rounded-full text-xs font-medium
-                               bg-[rgba(99,102,241,0.1)] border border-[rgba(99,102,241,0.2)] text-accent">
+                  <motion.span key={t}
+                    whileHover={{ y: -2, scale: 1.05, borderColor: 'rgba(99,102,241,0.4)', backgroundColor: 'rgba(99,102,241,0.15)' }}
+                    className="px-3 py-1 rounded-full text-xs font-medium cursor-default
+                               bg-[rgba(99,102,241,0.1)] border border-[rgba(99,102,241,0.2)] text-accent transition-colors">
                     {t}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </motion.div>

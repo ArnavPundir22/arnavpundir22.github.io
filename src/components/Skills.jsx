@@ -69,7 +69,9 @@ export default function Skills() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="flex lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
             {cats.map(cat => (
-              <button key={cat} onClick={() => setActive(cat)}
+              <motion.button key={cat} onClick={() => setActive(cat)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className={`flex-shrink-0 px-5 py-3 rounded-xl text-sm font-semibold text-left
                             transition-all duration-200 whitespace-nowrap
                             ${active === cat
@@ -83,7 +85,7 @@ export default function Skills() {
                       style={active === cat ? { color: color.text } : {}}>
                   ({skills[cat].length})
                 </span>
-              </button>
+              </motion.button>
             ))}
           </motion.div>
 
@@ -106,12 +108,13 @@ export default function Skills() {
           <div className="flex flex-wrap justify-center gap-3">
             {['cvzone', 'dlib', 'MediaPipe', 'DeepFace', 'Scikit-learn', 'Pandas',
               'NumPy', 'Gunicorn', 'Azure AI', 'Render', 'Netlify', 'Git'].map(t => (
-              <span key={t}
-                className="px-4 py-2 rounded-full text-xs font-medium text-[#94a3b8]
+              <motion.span key={t}
+                whileHover={{ y: -3, scale: 1.05, borderColor: 'rgba(99,102,241,0.4)', boxShadow: '0 8px 24px rgba(99,102,241,0.15)' }}
+                className="px-4 py-2 rounded-full text-xs font-medium text-[#94a3b8] cursor-default
                            border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.03)]
-                           hover:text-white hover:border-[rgba(99,102,241,0.3)] transition-colors">
+                           hover:text-white transition-colors duration-200">
                 {t}
-              </span>
+              </motion.span>
             ))}
           </div>
         </motion.div>

@@ -26,7 +26,9 @@ function TimelineItem({ item, i, total, inView }) {
       </div>
 
       {/* Card */}
-      <div className="glass-card p-5 mb-6 hover:border-[rgba(99,102,241,0.3)] transition-all duration-300">
+      <motion.div className="glass-card p-5 mb-6 cursor-pointer transition-colors duration-300"
+                  whileHover={{ y: -5, scale: 1.015, borderColor: 'rgba(99,102,241,0.35)', boxShadow: '0 12px 32px rgba(0,0,0,0.4)' }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
         <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
           <div>
             <h3 className="font-semibold text-white text-base leading-snug">{item.degree}</h3>
@@ -49,7 +51,7 @@ function TimelineItem({ item, i, total, inView }) {
             Currently Enrolled
           </div>
         )}
-      </div>
+      </motion.div>
     </motion.div>
   )
 }
@@ -136,10 +138,9 @@ export default function Education() {
                   initial={{ opacity: 0, x: 40 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.6, ease: 'easeOut', delay: i * 0.15 }}
-                  className="glass-card p-5 flex gap-4 items-start
-                             hover:border-[rgba(99,102,241,0.3)]
-                             hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)]
-                             transition-all duration-300 group">
+                  whileHover={{ y: -5, scale: 1.015, borderColor: 'rgba(99,102,241,0.35)', boxShadow: '0 12px 32px rgba(0,0,0,0.4)' }}
+                  className="glass-card p-5 flex gap-4 items-start cursor-pointer
+                             transition-colors duration-300 group">
                   <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
                        style={{ background: `${cert.color}18`, border: `1px solid ${cert.color}30` }}>
                     {certIcon[cert.badge]}

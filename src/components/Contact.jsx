@@ -141,7 +141,9 @@ export default function Contact() {
                   className={`${inputBase} resize-none`} />
               </div>
 
-              <button type="submit" disabled={status === 'loading'}
+              <motion.button type="submit" disabled={status === 'loading'}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className="flex items-center justify-center gap-3 py-3.5 px-8 rounded-xl font-semibold text-white
                            bg-gradient-to-r from-accent to-accent2
                            hover:opacity-90 disabled:opacity-60
@@ -156,7 +158,7 @@ export default function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
                   </svg> Send Message</>
                 )}
-              </button>
+              </motion.button>
 
               {status === 'success' && (
                 <p className="text-center text-emerald-400 text-sm font-medium">
@@ -189,12 +191,13 @@ export default function Contact() {
             </div>
 
             {contactInfo.map(({ icon, label, value, href }) => {
-              const Wrapper = href ? 'a' : 'div'
+              const Component = href ? motion.a : motion.div
               const props   = href ? { href, target: href.startsWith('http') ? '_blank' : undefined, rel: 'noopener noreferrer' } : {}
               return (
-                <Wrapper key={label} {...props}
+                <Component key={label} {...props}
+                  whileHover={href ? { y: -4, scale: 1.02, borderColor: 'rgba(99,102,241,0.35)', backgroundColor: 'rgba(99,102,241,0.05)' } : undefined}
                   className={`glass-card p-4 flex items-center gap-4 transition-all duration-200
-                              ${href ? 'hover:border-[rgba(99,102,241,0.35)] hover:bg-[rgba(99,102,241,0.05)] cursor-pointer' : ''}`}>
+                              ${href ? 'cursor-pointer' : ''}`}>
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0
                                   bg-[rgba(99,102,241,0.12)] border border-[rgba(99,102,241,0.2)] text-accent">
                     {icon}
@@ -203,7 +206,7 @@ export default function Contact() {
                     <p className="text-[#94a3b8] text-xs mb-0.5">{label}</p>
                     <p className="text-white text-sm font-medium">{value}</p>
                   </div>
-                </Wrapper>
+                </Component>
               )
             })}
           </motion.div>

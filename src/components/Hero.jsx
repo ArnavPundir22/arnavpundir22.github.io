@@ -68,13 +68,15 @@ function Typewriter() {
 /* ---------- Social link ---------- */
 function SocialLink({ href, label, children }) {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+    <motion.a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+       whileHover={{ y: -3, scale: 1.1 }}
+       whileTap={{ scale: 0.9 }}
        className="w-11 h-11 rounded-full flex items-center justify-center
                   border border-[rgba(99,102,241,0.25)] text-[#94a3b8]
                   hover:border-accent hover:text-accent hover:bg-[rgba(99,102,241,0.1)]
                   transition-all duration-200">
       {children}
-    </a>
+    </motion.a>
   )
 }
 
@@ -121,22 +123,26 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 mb-10">
-              <a href="#projects"
+              <motion.a href="#projects"
+                 whileHover={{ scale: 1.05, y: -2 }}
+                 whileTap={{ scale: 0.95 }}
                  onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }) }}
                  className="px-7 py-3.5 rounded-full font-semibold text-white
                             bg-gradient-to-r from-accent to-accent2
                             hover:opacity-90 transition-all duration-200
                             shadow-[0_0_30px_rgba(99,102,241,0.35)]">
                 View My Work
-              </a>
-              <a href="#contact"
+              </motion.a>
+              <motion.a href="#contact"
+                 whileHover={{ scale: 1.05, y: -2 }}
+                 whileTap={{ scale: 0.95 }}
                  onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
                  className="px-7 py-3.5 rounded-full font-semibold text-[#f1f5f9]
                             border border-[rgba(99,102,241,0.4)]
                             hover:border-accent hover:bg-[rgba(99,102,241,0.1)]
                             transition-all duration-200">
                 Get In Touch
-              </a>
+              </motion.a>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex items-center gap-3">
@@ -165,11 +171,15 @@ export default function Hero() {
             className="flex justify-center">
             <div className="relative">
               {/* Glow ring */}
-              <div className="absolute -inset-4 rounded-3xl opacity-30"
-                style={{ background: 'conic-gradient(from 0deg, #6366f1, #a78bfa, #38bdf8, #6366f1)', filter: 'blur(20px)' }} />
+              <motion.div className="absolute -inset-4 rounded-3xl opacity-30"
+                style={{ background: 'conic-gradient(from 0deg, #6366f1, #a78bfa, #38bdf8, #6366f1)', filter: 'blur(20px)' }}
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 12, ease: 'linear' }} />
               {/* Card */}
-              <div className="relative rounded-3xl overflow-hidden border border-[rgba(99,102,241,0.2)]
-                              shadow-[0_32px_80px_rgba(0,0,0,0.6)]"
+              <motion.div className="relative rounded-3xl overflow-hidden border border-[rgba(99,102,241,0.2)]
+                              shadow-[0_32px_80px_rgba(0,0,0,0.6)] cursor-pointer"
+                   whileHover={{ y: -6, scale: 1.015 }}
+                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                    style={{ background: 'linear-gradient(135deg, #111927 0%, #0c1220 100%)' }}>
                 <img src="/images/man1.png" alt="Arnav Pundir"
                      className="w-72 sm:w-80 xl:w-96 object-cover" />
@@ -183,7 +193,7 @@ export default function Hero() {
                     <p className="text-xs text-accent">B.Tech CSE · 2024–2028</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
 

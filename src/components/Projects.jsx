@@ -26,10 +26,9 @@ function ProjectCard({ project, i }) {
     <motion.div ref={ref}
       initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.55, ease: 'easeOut', delay: (i % 3) * 0.1 }}
-      className="glass-card flex flex-col gap-4 group overflow-hidden
-                 hover:border-[rgba(99,102,241,0.3)]
-                 hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)]
-                 transition-all duration-300">
+      whileHover={{ y: -8, scale: 1.015, borderColor: 'rgba(99,102,241,0.35)', boxShadow: '0 20px 40px rgba(0,0,0,0.5)' }}
+      className="glass-card flex flex-col gap-4 group overflow-hidden cursor-pointer
+                 transition-colors duration-300">
 
       {/* Project background image banner */}
       {project.image && (
@@ -137,13 +136,15 @@ export default function Projects() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="flex flex-wrap justify-center gap-3 mb-12">
           {projectCategories.map(cat => (
-            <button key={cat} onClick={() => setFilter(cat)}
+            <motion.button key={cat} onClick={() => setFilter(cat)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200
                           ${filter === cat
                             ? 'bg-gradient-to-r from-accent to-accent2 text-white shadow-[0_0_20px_rgba(99,102,241,0.35)]'
                             : 'border border-[rgba(99,102,241,0.2)] text-[#94a3b8] hover:text-white hover:border-[rgba(99,102,241,0.4)]'}`}>
               {cat}
-            </button>
+            </motion.button>
           ))}
         </motion.div>
 
