@@ -162,7 +162,7 @@ export default function Hero() {
           {/* ── Photo card ── */}
           <motion.div variants={fadeLeft} initial="hidden" animate="show"
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
-            className="hidden lg:flex justify-center">
+            className="flex justify-center">
             <div className="relative">
               {/* Glow ring */}
               <div className="absolute -inset-4 rounded-3xl opacity-30"
@@ -172,7 +172,7 @@ export default function Hero() {
                               shadow-[0_32px_80px_rgba(0,0,0,0.6)]"
                    style={{ background: 'linear-gradient(135deg, #111927 0%, #0c1220 100%)' }}>
                 <img src="/images/man1.png" alt="Arnav Pundir"
-                     className="w-80 xl:w-96 object-cover" />
+                     className="w-72 sm:w-80 xl:w-96 object-cover" />
                 {/* Overlay badge */}
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="rounded-2xl px-4 py-3 backdrop-blur-xl
