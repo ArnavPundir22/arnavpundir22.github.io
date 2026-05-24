@@ -60,7 +60,7 @@ export default function About() {
                             hover:opacity-90 transition-opacity shadow-[0_0_24px_rgba(99,102,241,0.3)]">
                 Let's Connect
               </a>
-              <a href="/Documents/ArnavPundir_BuildingWithAI.pdf" download
+              <a href="/Documents/Arnav_Pundir_Resume.pdf" download
                  className="px-6 py-3 rounded-full text-sm font-semibold text-[#f1f5f9]
                             border border-[rgba(99,102,241,0.35)]
                             hover:border-accent hover:bg-[rgba(99,102,241,0.08)]

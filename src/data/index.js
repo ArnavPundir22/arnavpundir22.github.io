@@ -92,6 +92,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/SevaSetu',
     live: 'https://sevasetu.app',
     featured: true,
+    image: '/images/sevasetu.png',
+    imageAlt: 'SevaSetu — Service Booking Platform dashboard with calendar and map',
   },
   {
     id: 3,
@@ -103,6 +105,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Traffic_analysis-system',
     live: null,
     featured: true,
+    image: '/images/traffic-analysis.png',
+    imageAlt: 'Traffic Analysis System — aerial highway view with AI vehicle detection bounding boxes',
   },
   {
     id: 4,
@@ -114,6 +118,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/DocBot',
     live: null,
     featured: true,
+    image: '/images/docbot.png',
+    imageAlt: 'DocBot — AI Documentation Assistant with chat interface and code panels',
   },
   {
     id: 5,
@@ -125,6 +131,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Anti-Spoofing-',
     live: null,
     featured: false,
+    image: '/images/anti-spoofing.png',
+    imageAlt: 'Anti-Spoofing System — real face verified vs printed photo rejected',
   },
   {
     id: 6,
@@ -136,6 +144,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Air-Mouse',
     live: null,
     featured: false,
+    image: '/images/air-mouse.png',
+    imageAlt: 'Air-Mouse — hand gesture control with MediaPipe landmark tracking',
   },
   {
     id: 7,
@@ -147,6 +157,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Devin-Personal-Desktop-Voice-Assistant',
     live: null,
     featured: false,
+    image: '/images/devin-assistant.png',
+    imageAlt: 'Devin — Desktop Voice Assistant with audio waveform and GUI',
   },
   {
     id: 8,
@@ -158,6 +170,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/ASL-translator',
     live: null,
     featured: false,
+    image: '/images/asl-translator.png',
+    imageAlt: 'ASL Translator — hand sign recognition with CNN neural network',
   },
   {
     id: 9,
@@ -169,6 +183,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Voice2Code-Codio',
     live: null,
     featured: false,
+    image: '/images/voice2code.png',
+    imageAlt: 'Voice2Code — microphone audio waveform transforming into code',
   },
   {
     id: 10,
@@ -180,6 +196,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/EmotionMusicApp',
     live: null,
     featured: false,
+    image: '/images/emotion-music.png',
+    imageAlt: 'Emotion Music App — face emotion detection connected to music visualization',
   },
   {
     id: 11,
@@ -191,6 +209,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Smart-Women-Safety-App',
     live: null,
     featured: false,
+    image: '/images/women-safety.png',
+    imageAlt: 'Smart Women Safety App — map with SOS alert and safety perimeter',
   },
   {
     id: 12,
@@ -202,6 +222,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Surgical-Tool-Detection-in-laparoscopy-video',
     live: null,
     featured: false,
+    image: '/images/surgical-tool.png',
+    imageAlt: 'Surgical Tool Detection — laparoscopy view with YOLO bounding boxes',
   },
   {
     id: 13,
@@ -212,6 +234,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Air-Kalam-',
     live: 'https://air-kalam-7w7q.vercel.app/',
     featured: false,
+    image: '/images/air-kalam.png',
+    imageAlt: 'Air-Kalam — hand gesture drawing with colorful glowing trails on virtual whiteboard',
   },
 ]
 
@@ -257,7 +281,7 @@ export const certifications = [
     title: 'Nexus Spring of Code 2026 — Contributor',
     issuer: 'Nexus Spring of Code (NSoC)',
     badge: 'github',
-    description: 'Selected contributor for NSoC ’26, actively working on open-source projects with mentors and community collaboration.',
+    description: "Selected contributor for NSoC '26, actively working on open-source projects with mentors and community collaboration.",
     color: '#8b5cf6',
     verificationUrl: 'https://drive.google.com/drive/folders/1Y9uOCb0bdL6XBZF77tvt6ZTIpuessB5h',
   },
