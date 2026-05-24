@@ -149,12 +149,12 @@ export const projects = [
   },
   {
     id: 7,
-    title: 'Devin — Desktop Voice Assistant',
+    title: 'Maya — Desktop Voice Assistant',
     description:
       'Python-based AI voice assistant with system and media control. Built with PyQt5 GUI, speech recognition, and text-to-speech for hands-free PC interaction.',
     tags: ['Python', 'PyQt5', 'Speech Recognition', 'TTS'],
     category: 'AI / NLP',
-    github: 'https://github.com/ArnavPundir22/Devin-Personal-Desktop-Voice-Assistant',
+    github: 'https://github.com/ArnavPundir22/Maya-Personal-Desktop-Voice-Assistant',
     live: null,
     featured: false,
     image: '/images/devin-assistant.png',
