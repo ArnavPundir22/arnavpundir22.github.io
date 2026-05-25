@@ -201,12 +201,12 @@ export const projects = [
   },
   {
     id: 11,
-    title: 'Smart Women Safety App',
+    title: 'SHEro - Smart Women Safety App',
     description:
       'Web app for real-time location sharing and SOS triggering. Built with Flask backend, integrates maps and instant alert systems for emergency response.',
     tags: ['Flask', 'JavaScript', 'Maps API', 'Python'],
     category: 'Full-Stack',
-    github: 'https://github.com/ArnavPundir22/Smart-Women-Safety-App',
+    github: 'https://github.com/ArnavPundir22/SHEro-Smart-Women-Safety-App',
     live: null,
     featured: false,
     image: '/images/women-safety.png',
