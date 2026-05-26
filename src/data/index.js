@@ -16,7 +16,7 @@ export const profile = {
     "Currently pursuing B.Tech in Computer Science and Engineering at COER University, Roorkee.",
   ],
   stats: [
-    { value: 15, suffix: '+', label: 'Projects Built' },
+    { value: 13, suffix: '+', label: 'Projects Built' },
     { value: 2, suffix: '+', label: 'Years Coding' },
     { value: 10, suffix: '+', label: 'Tech Stacks' },
     { value: 5, suffix: '', label: 'Certifications' },
