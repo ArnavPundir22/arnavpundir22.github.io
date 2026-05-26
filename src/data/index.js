@@ -71,6 +71,19 @@ export const skills = {
 export const projects = [
   {
     id: 1,
+    title: 'TraceAI — Forensic Surveillance Intelligence Platform',
+    description:
+      'TraceAI is a real-time AI-powered forensic surveillance intelligence platform that identifies, tracks, and reconstructs the movement timeline of individuals across distributed CCTV/video sources using face recognition, person re-identification, temporal tracking, and event analytics.',
+    tags: ['Python', 'FastAPI', 'YOLOv8', 'HTML/CSS', 'OpenCV'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/TraceAI-Intelligent-Missing-Person-Suspect-Tracking-System',
+    live: null,
+    featured: true,
+    image: '/images/TraceAI.png',
+    imageAlt: 'TraceAI is a real-time AI-powered forensic surveillance intelligence platform that identifies, tracks, and reconstructs the movement timeline of individuals across distributed CCTV/video sources using face recognition, person re-identification, temporal tracking, and event analytics.',
+  },
+  {
+    id: 2,
     title: 'Face Recognition Attendance Web System',
     description:
       'Full-stack web app using Flask backend with InsightFace encoding pipeline. Automates attendance via group photo upload, multi-face detection, confidence scores, and structured CSV logs.',
@@ -83,7 +96,7 @@ export const projects = [
     imageAlt: 'InsightAttend — AI-Powered Smart Attendance System dashboard and face recognition demo',
   },
   {
-    id: 2,
+    id: 3,
     title: 'SevaSetu — Service Booking Platform',
     description:
       'Real-world client service website built with React.js and Flask backend. Delivered a fully responsive booking platform with smooth navigation, REST API integration, and live deployment.',
@@ -96,7 +109,7 @@ export const projects = [
     imageAlt: 'SevaSetu — Service Booking Platform dashboard with calendar and map',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Traffic Analysis System',
     description:
       'Real-time traffic monitoring using YOLOv8 for vehicle detection and counting. Supports multi-class detection, lane analysis, and generates structured traffic flow reports.',
@@ -109,7 +122,7 @@ export const projects = [
     imageAlt: 'Traffic Analysis System — aerial highway view with AI vehicle detection bounding boxes',
   },
   {
-    id: 4,
+    id: 5,
     title: 'DocBot — AI Documentation Assistant',
     description:
       'Summarizes web documentation and answers natural language questions using the Gemini API. Built with PyQt5 GUI, handling live content extraction and NLP-based Q&A.',
@@ -122,7 +135,7 @@ export const projects = [
     imageAlt: 'DocBot — AI Documentation Assistant with chat interface and code panels',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Anti-Spoofing System',
     description:
       'Real-time liveness detection using OpenCV and TensorFlow/YOLOv8 to prevent spoofing attacks in facial authentication systems. Detects printed photos and screen replays.',
@@ -135,7 +148,7 @@ export const projects = [
     imageAlt: 'Anti-Spoofing System — real face verified vs printed photo rejected',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Air-Mouse — Gesture Control',
     description:
       'Controls the mouse with hand gestures — no physical device needed. Uses MediaPipe hand landmark detection and Python for real-time cursor control, click, and scroll actions.',
@@ -148,7 +161,7 @@ export const projects = [
     imageAlt: 'Air-Mouse — hand gesture control with MediaPipe landmark tracking',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Maya — Desktop Voice Assistant',
     description:
       'Python-based AI voice assistant with system and media control. Built with PyQt5 GUI, speech recognition, and text-to-speech for hands-free PC interaction.',
@@ -161,7 +174,7 @@ export const projects = [
     imageAlt: 'Devin — Desktop Voice Assistant with audio waveform and GUI',
   },
   {
-    id: 8,
+    id: 9,
     title: 'ASL Translator',
     description:
       'American Sign Language translator using CNN models for real-time gesture classification from webcam feed. Converts hand signs to text with high accuracy.',
@@ -174,7 +187,7 @@ export const projects = [
     imageAlt: 'ASL Translator — hand sign recognition with CNN neural network',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Voice2Code — Codio',
     description:
       'AI-powered tool that converts spoken programming instructions into executable code in real time. Bridges voice interface with code generation using NLP pipelines.',
@@ -187,7 +200,7 @@ export const projects = [
     imageAlt: 'Voice2Code — microphone audio waveform transforming into code',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Emotion Music App',
     description:
       'Plays songs based on the user\'s detected emotion using DeepFace and PyQt5. Webcam-based mood detection with intelligent audio selection for personalized music playback.',
@@ -200,7 +213,7 @@ export const projects = [
     imageAlt: 'Emotion Music App — face emotion detection connected to music visualization',
   },
   {
-    id: 11,
+    id: 12,
     title: 'SHEro - Smart Women Safety App',
     description:
       'Web app for real-time location sharing and SOS triggering. Built with Flask backend, integrates maps and instant alert systems for emergency response.',
@@ -213,7 +226,7 @@ export const projects = [
     imageAlt: 'Smart Women Safety App — map with SOS alert and safety perimeter',
   },
   {
-    id: 12,
+    id: 13,
     title: 'Surgical Tool Detection',
     description:
       'YOLO-based detection of surgical instruments in laparoscopy videos. Supports real-time inference on medical video streams for operating room assistance.',
@@ -226,7 +239,7 @@ export const projects = [
     imageAlt: 'Surgical Tool Detection — laparoscopy view with YOLO bounding boxes',
   },
   {
-    id: 13,
+    id: 14,
     title: 'Air-Kalam',
     description: 'Hand Guesture controlled whiteboard pen. use hand guesture to write/ draw without using any mouse or writting pad, just by moving fingers in front of the camera.',
     tags: ['Web App', 'Vercel'],
