@@ -76,7 +76,7 @@ export const projects = [
     description:
       'BaatCheet is a highly scalable, real-time communication platform built with Flask, WebRTC, and Redis, designed for instant peer-to-peer video streaming and text messaging. It features a strict "ephemeral" architecture where no chat histories or user logs are ever saved; the moment a room is empty, all data permanently self-destructs.',
     tags: ['Python', 'Flask', 'WebRTC', 'Redis', 'HTML/CSS', 'OpenCV'],
-    category: 'AI / CV',
+    category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/BaatCheet',
     live: 'https://baatcheet-88e9.onrender.com',
     featured: true,
