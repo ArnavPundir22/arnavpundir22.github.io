@@ -9,11 +9,12 @@ export const profile = {
   cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
-    "I build end-to-end AI-powered systems with a focus on computer vision. I've developed a face recognition-based attendance platform that handles encoding optimization, multi-face detection, and scalable UI workflows.",
-    "I work across backend (Flask, REST APIs), frontend (React.js, Tailwind CSS), and model integration (YOLOv8, InsightFace, TensorFlow), and I focus on improving both accuracy and usability through iterative system design.",
-    "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC ’26), currently contributing to real open-source projects in a mentor-guided community.",
-    "Accepted into GirlScript Summer of Code 2026 (GSSoC ’26) as Contributor / Mentee in the Open Source Track, with contributions beginning from 15 May 2026.",
-    "Currently pursuing B.Tech in Computer Science and Engineering at COER University, Roorkee.",
+    "I build end-to-end AI-powered systems with a focus on Computer Vision, Machine Learning, and intelligent automation. My work spans from developing AI models to designing scalable web applications that solve real-world problems.",
+    "I've built projects including face recognition-based attendance systems, AI-powered tracking platforms, and intelligent document processing solutions, with an emphasis on accuracy, performance, and user experience.",
+    "I work across backend development (Flask, REST APIs), frontend technologies (React.js, Tailwind CSS), and AI model integration (YOLOv8, InsightFace, TensorFlow), enabling me to deliver complete, production-ready solutions.",
+    "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC '26), where I contribute to open-source projects while collaborating with mentors and developers from diverse technical backgrounds.",
+    "Accepted into GirlScript Summer of Code 2026 (GSSoC '26) as a Contributor in the Open Source Track, actively contributing to community-driven software projects and strengthening my open-source development experience.",
+    "Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, with a strong interest in Artificial Intelligence, Computer Vision, Full-Stack Development, and Open Source."
   ],
   stats: [
     { value: 13, suffix: '+', label: 'Projects Built' },
