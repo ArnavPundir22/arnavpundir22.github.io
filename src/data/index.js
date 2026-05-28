@@ -264,6 +264,18 @@ export const projects = [
     image: '/images/air-kalam.png',
     imageAlt: 'Air-Kalam — hand gesture drawing with colorful glowing trails on virtual whiteboard',
   },
+  {
+    id: 16,
+    title: 'GitHub City',
+    description: 'Visualize any GitHub user\'s repository portfolio as a living, breathing 3D city — where every building is a repo and every window is a commit. Features realistic skyscraper geometry and commit-driven window lighting.',
+    tags: ['React.js', 'Three.js', 'Vite', 'GitHub API'],
+    category: 'Full-Stack',
+    github: 'https://github.com/ArnavPundir22/GitHub-City',
+    live: null,
+    featured: true,
+    image: '/images/github-city.png',
+    imageAlt: 'GitHub City — 3D skyscraper city visualization of GitHub repositories',
+  },
 ]
 
 export const projectCategories = ['All', 'AI / CV', 'Full-Stack', 'AI / NLP']
