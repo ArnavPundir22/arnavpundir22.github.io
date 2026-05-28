@@ -271,7 +271,7 @@ export const projects = [
     tags: ['React.js', 'Three.js', 'Vite', 'GitHub API'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/GitHub-City',
-    live: null,
+    live: 'https://arnavpundir22.github.io/GitHub-City/',
     featured: true,
     image: '/images/github-city.png',
     imageAlt: 'GitHub City — 3D skyscraper city visualization of GitHub repositories',
