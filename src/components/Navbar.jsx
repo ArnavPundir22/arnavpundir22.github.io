@@ -29,8 +29,14 @@ export default function Navbar() {
   }, [])
 
   const go = (href) => {
-    setMenuOpen(false)
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    if (menuOpen) {
+      setMenuOpen(false)
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+      }, 300)
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   return (

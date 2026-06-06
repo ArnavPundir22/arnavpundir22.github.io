@@ -71,6 +71,19 @@ export const skills = {
 
 export const projects = [
   {
+    id: 17,
+    title: 'Occassions — Event Registration & Management Platform',
+    description:
+      'Occassions is a modern full-stack event management platform built for the Byamn Summer Web Development Internship. It features secure host/attendee authentication, event CRUD operations, real-time attendee capacity limits, registration cutoff timers, role-based dashboards, and CSV exports.',
+    tags: ['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'NextAuth.js'],
+    category: 'Full-Stack',
+    github: 'https://github.com/ArnavPundir22/Occassions',
+    live: 'https://occassions.vercel.app',
+    featured: true,
+    image: '/images/occassions.png',
+    imageAlt: 'Occassions event management dashboard, tracking registrants, event capacity limits, and CSV export functionality.',
+  },
+  {
     id: 1,
     title: 'BaatCheet — A Real-Time Text and Video Chat Application',
     description:
