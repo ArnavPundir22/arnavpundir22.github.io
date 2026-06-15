@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Arnav Pundir',
-  tagline: 'AI & Full-Stack Engineer',
+  tagline: 'Full-Stack Developer & Open-Source Contributor',
   location: 'Roorkee, India',
   email: 'arnavp128@gmail.com',
   phone: '+91 70606 75133',
@@ -9,12 +9,7 @@ export const profile = {
   cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
-    "I build end-to-end AI-powered systems with a focus on Computer Vision, Machine Learning, and intelligent automation. My work spans from developing AI models to designing scalable web applications that solve real-world problems.",
-    "I've built projects including face recognition-based attendance systems, AI-powered tracking platforms, and intelligent document processing solutions, with an emphasis on accuracy, performance, and user experience.",
-    "I work across backend development (Flask, REST APIs), frontend technologies (React.js, Tailwind CSS), and AI model integration (YOLOv8, InsightFace, TensorFlow), enabling me to deliver complete, production-ready solutions.",
-    "Selected as a Contributor for Nexus Spring of Code 2026 (NSoC '26), where I contribute to open-source projects while collaborating with mentors and developers from diverse technical backgrounds.",
-    "Accepted into GirlScript Summer of Code 2026 (GSSoC '26) as a Contributor in the Open Source Track, actively contributing to community-driven software projects and strengthening my open-source development experience.",
-    "Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, with a strong interest in Artificial Intelligence, Computer Vision, Full-Stack Development, and Open Source."
+    "I am an AI & Full-Stack Engineer with hands-on expertise building intelligent systems and high-performance web applications. My work spans from developing Computer Vision models (YOLOv8, InsightFace, TensorFlow) to engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Flask. I specialize in delivering production-ready freelance projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as AI-powered face recognition and tracking solutions. Beyond development, I actively contribute to open-source software, having achieved a global Top 65 rank in Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between cutting-edge Artificial Intelligence and robust, modern web development."
   ],
   stats: [
     { value: 13, suffix: '+', label: 'Projects Built' },
@@ -25,76 +20,102 @@ export const profile = {
 }
 
 export const roles = [
+  'Full-Stack Developer',
+  'Frontend Specialist',
+  'Open-Source Contributor',
+  '3D WebGL Enthusiast',
   'AI & Computer Vision Engineer',
-  'Full-Stack Web Developer',
-  'Python & Flask Developer',
-  'React.js Developer',
-  'Open-Source Builder',
+]
+
+export const experience = [
+  {
+    title: 'Freelance Frontend Developer',
+    company: 'Client & Independent Projects',
+    location: 'Roorkee, India',
+    period: 'Jan 2024 – Present',
+    description: [
+      'Developed and deployed a responsive service-booking platform (SevaSetu) using React.js, translating client requirements into a modern, production-ready user interface.',
+      'Engineered two ultra-premium cinematic hotel websites (Hotel Pacific, Hotel Sachin) utilizing Three.js, GSAP, and Framer Motion for immersive 3D WebGL rendering and physics-based scroll animations.',
+      'Optimized frontend assets and implemented component lazy-loading, achieving 95+ Lighthouse performance and accessibility scores across all deployments.'
+    ]
+  }
+]
+
+export const openSource = [
+  {
+    role: 'Core Contributor',
+    organization: "Nexus Spring of Code (NSoC '26) & GSSoC",
+    period: 'Apr 2026 – Present',
+    rank: 'Ranked #63',
+    description: [
+      'Achieved Top 65 rank globally by merging 13 Pull Requests across 5 repositories, specializing in production-grade backend security and frontend performance.',
+      'Migrated legacy authentication to secure, rotating HttpOnly cookie sessions and encrypted sensitive user data at rest utilizing Fernet cryptography.',
+      'Enhanced backend security by tightening CORS policies, and improved frontend UX by implementing server-side pagination, debounced searches, and loading skeletons.'
+    ]
+  }
 ]
 
 export const skills = {
   Languages: [
+    { name: 'C++', level: 80 },
+    { name: 'JavaScript', level: 85 },
+    { name: 'TypeScript', level: 80 },
     { name: 'Python', level: 90 },
-    { name: 'JavaScript', level: 80 },
-    { name: 'Java', level: 65 },
-    { name: 'C++', level: 60 },
-    { name: 'SQL', level: 70 },
-    { name: 'HTML & CSS', level: 85 },
+    { name: 'SQL', level: 75 },
+    { name: 'HTML/CSS', level: 90 },
   ],
   Frontend: [
-    { name: 'React.js', level: 78 },
-    { name: 'Tailwind CSS', level: 80 },
-    { name: 'Responsive Web Design', level: 85 },
-    { name: 'PyQt5 (Desktop GUI)', level: 75 },
+    { name: 'React.js', level: 85 },
+    { name: 'Next.js', level: 80 },
+    { name: 'Tailwind CSS', level: 90 },
+    { name: 'Three.js', level: 75 },
+    { name: 'GSAP', level: 80 },
+    { name: 'Framer Motion', level: 85 },
   ],
   Backend: [
     { name: 'Flask', level: 82 },
-    { name: 'REST APIs', level: 78 },
-    { name: 'MySQL', level: 68 },
-    { name: 'PostgreSQL', level: 62 },
+    { name: 'WebRTC', level: 75 },
+    { name: 'Redis', level: 70 },
+    { name: 'REST APIs', level: 85 },
   ],
-  'AI / CV': [
-    { name: 'OpenCV', level: 88 },
-    { name: 'YOLOv8', level: 80 },
-    { name: 'TensorFlow / Keras', level: 72 },
-    { name: 'InsightFace / dlib', level: 75 },
-    { name: 'MediaPipe', level: 72 },
-    { name: 'DeepFace', level: 68 },
+  Databases: [
+    { name: 'MongoDB', level: 78 },
+    { name: 'PostgreSQL', level: 70 },
+    { name: 'MySQL', level: 75 },
   ],
   Tools: [
-    { name: 'Git & GitHub', level: 85 },
+    { name: 'Git', level: 85 },
+    { name: 'GitHub', level: 85 },
     { name: 'VS Code', level: 90 },
-    { name: 'Render / Netlify', level: 65 },
-    { name: 'Azure AI Vision', level: 60 },
   ],
 }
 
 export const projects = [
   {
     id: 17,
-    title: 'Occassions — Event Registration & Management Platform',
+    title: 'Occasions Event Registration Platform',
     description:
-      'Occassions is a modern full-stack event management platform built for the Byamn Summer Web Development Internship. It features secure host/attendee authentication, event CRUD operations, real-time attendee capacity limits, registration cutoff timers, role-based dashboards, and CSV exports.',
-    tags: ['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'NextAuth.js'],
+      'Engineered a full-stack event platform using Next.js 15 and TypeScript, supporting concurrent user traffic and dynamic event capacities for 500+ attendees. Secured platform routes by implementing role-based organizer/attendee authentication flows via NextAuth.js and MongoDB. Built robust search/filter algorithms with debouncing to reduce query latency by 40%, and developed automated CSV data export pipelines for organizers.',
+    tags: ['Next.js 15', 'TypeScript', 'NextAuth.js', 'MongoDB', 'Tailwind CSS'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/Occassions',
     live: 'https://occassions.vercel.app',
     featured: true,
     image: '/images/occassions.png',
-    imageAlt: 'Occassions event management dashboard, tracking registrants, event capacity limits, and CSV export functionality.',
+    imageAlt: 'Occasions event management dashboard, tracking registrants, event capacity limits, and CSV export functionality.',
   },
   {
     id: 1,
-    title: 'BaatCheet — A Real-Time Text and Video Chat Application',
+    title: 'BaatCheet Real-Time Video Chat App',
     description:
-      'BaatCheet is a highly scalable, real-time communication platform built with Flask, WebRTC, and Redis, designed for instant peer-to-peer video streaming and text messaging. It features a strict "ephemeral" architecture where no chat histories or user logs are ever saved; the moment a room is empty, all data permanently self-destructs.',
-    tags: ['Python', 'Flask', 'WebRTC', 'Redis', 'HTML/CSS', 'OpenCV'],
+      'Architected a scalable real-time messaging and peer-to-peer video streaming application using Node.js, Express, WebRTC, and Redis, ensuring sub-100ms low-latency communication. Designed an "ephemeral" data lifecycle that automatically purges and self-destructs all chat logs and rooms the moment participants disconnect. Programmed a dynamic, responsive video canvas layout using CSS flexbox grids to automatically optimize screen space across mobile and desktop devices.',
+    tags: ['Flask', 'WebRTC', 'Redis', 'Python', 'CSS Flexbox'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/BaatCheet',
     live: 'https://baatcheet-88e9.onrender.com',
     featured: true,
     image: '/images/BaatCheet.png',
-    imageAlt: 'BaatCheet is a highly scalable, real-time communication platform built with Flask, WebRTC, and Redis, designed for instant peer-to-peer video streaming and text messaging. It features a strict "ephemeral" architecture where no chat histories or user logs are ever saved; the moment a room is empty, all data permanently self-destructs.',
+    imageAlt: 'BaatCheet Real-Time Video Chat App interface showing ephemeral video streams and chat.',
   },
   {
     id: 2,
@@ -309,14 +330,6 @@ export const education = [
     period: '2022 – 2024',
     current: false,
     description: 'Physics, Chemistry, Mathematics stream with strong foundation in analytical thinking.',
-  },
-  {
-    degree: 'Secondary School (Class X)',
-    institution: 'Montfort Sen. Sec. School',
-    location: 'Roorkee, India',
-    period: '2022',
-    current: false,
-    description: null,
   },
 ]
 
