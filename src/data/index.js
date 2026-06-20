@@ -9,7 +9,7 @@ export const profile = {
   cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
-    "I am an AI & Full-Stack Engineer with hands-on expertise building intelligent systems and high-performance web applications. My work spans from developing Computer Vision models (YOLOv8, InsightFace, TensorFlow) to engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Flask. I specialize in delivering production-ready freelance projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as AI-powered face recognition and tracking solutions. Beyond development, I actively contribute to open-source software, having achieved a global Top 65 rank in Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between cutting-edge Artificial Intelligence and robust, modern web development."
+    "I am an AI & Full-Stack Engineer with hands-on expertise building intelligent systems and high-performance web applications. My work spans from developing Computer Vision models (YOLOv8, InsightFace, TensorFlow) to engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Flask. I specialize in delivering production-ready freelance projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as AI-powered face recognition and tracking solutions. Beyond development, I actively contribute to open-source software, having achieved Global Rank 70 in the completed Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between cutting-edge Artificial Intelligence and robust, modern web development."
   ],
   stats: [
     { value: 13, suffix: '+', label: 'Projects Built' },
@@ -45,10 +45,10 @@ export const openSource = [
   {
     role: 'Core Contributor',
     organization: "Nexus Spring of Code (NSoC '26) & GSSoC",
-    period: 'Apr 2026 – Present',
-    rank: 'Ranked #63',
+    period: 'Apr 2026 – Jun 2026',
+    rank: 'Ranked #70',
     description: [
-      'Achieved Top 65 rank globally by merging 13 Pull Requests across 5 repositories, specializing in production-grade backend security and frontend performance.',
+      'Achieved Global Rank 70 by merging 13 Pull Requests across 5 repositories, specializing in production-grade backend security and frontend performance.',
       'Migrated legacy authentication to secure, rotating HttpOnly cookie sessions and encrypted sensitive user data at rest utilizing Fernet cryptography.',
       'Enhanced backend security by tightening CORS policies, and improved frontend UX by implementing server-side pagination, debounced searches, and loading skeletons.'
     ]
@@ -346,7 +346,7 @@ export const certifications = [
     title: 'Nexus Spring of Code 2026 — Contributor',
     issuer: 'Nexus Spring of Code (NSoC)',
     badge: 'github',
-    description: "Selected contributor for NSoC '26, actively working on open-source projects with mentors and community collaboration.",
+    description: "Completed NSoC '26 open-source program, actively collaborating on projects with mentors and community to achieve Global Rank 70.",
     color: '#8b5cf6',
     verificationUrl: 'https://drive.google.com/drive/folders/1Y9uOCb0bdL6XBZF77tvt6ZTIpuessB5h',
   },
