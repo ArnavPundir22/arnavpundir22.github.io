@@ -9,7 +9,7 @@ export const profile = {
   cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
-    "I am an AI & Full-Stack Engineer with hands-on expertise building intelligent systems and high-performance web applications. My work spans from developing Computer Vision models (YOLOv8, InsightFace, TensorFlow) to engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Flask. I specialize in delivering production-ready freelance projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as AI-powered face recognition and tracking solutions. Beyond development, I actively contribute to open-source software, having achieved Global Rank 70 in the completed Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between cutting-edge Artificial Intelligence and robust, modern web development."
+    "I am a Full-Stack Engineer and UI/UX enthusiast with hands-on expertise building intelligent systems and high-performance web applications. My work heavily focuses on crafting seamless user experiences and engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Node.js. I specialize in delivering production-ready projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as complex real-time video and multiplayer applications. Beyond development, I actively contribute to open-source software, having achieved Global Rank 70 in the completed Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between robust engineering, automation, and stunning modern web design."
   ],
   stats: [
     { value: 13, suffix: '+', label: 'Projects Built' },
@@ -108,8 +108,8 @@ export const projects = [
     id: 1,
     title: 'BaatCheet Real-Time Video Chat App',
     description:
-      'Architected a scalable real-time messaging and peer-to-peer video streaming application using Node.js, Express, WebRTC, and Redis, ensuring sub-100ms low-latency communication. Designed an "ephemeral" data lifecycle that automatically purges and self-destructs all chat logs and rooms the moment participants disconnect. Programmed a dynamic, responsive video canvas layout using CSS flexbox grids to automatically optimize screen space across mobile and desktop devices.',
-    tags: ['Flask', 'WebRTC', 'Redis', 'Python', 'CSS Flexbox'],
+      'Architected a scalable real-time messaging and peer-to-peer video streaming application using Node.js, Express, WebRTC, and Redis. Features an "ephemeral" data lifecycle that automatically self-destructs chat logs upon disconnect. Recently engineered a real-time multiplayer Air Draw feature using the Canvas API for synchronized hand-tracked drawing over video feeds, and integrated a comprehensive dark-mode glassmorphic emoji gallery.',
+    tags: ['Node.js', 'Express', 'WebRTC', 'Redis', 'Canvas API'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/BaatCheet',
     live: 'https://baatcheet-88e9.onrender.com',
