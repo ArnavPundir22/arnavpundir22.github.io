@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
@@ -14,6 +14,18 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [active,   setActive]   = useState('home')
+  const [resumeDropdownOpen, setResumeDropdownOpen] = useState(false)
+  const resumeDropdownRef = useRef(null)
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (resumeDropdownRef.current && !resumeDropdownRef.current.contains(event.target)) {
+        setResumeDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -79,24 +91,63 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Resume Buttons */}
-        <a href="/Documents/Arnav_Pundir_Resume.pdf" download
-           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold
-                       bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-90 transition-opacity
-                       shadow-[0_0_24px_rgba(99,102,241,0.4)]">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-              d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          Download Resume
-        </a>
-        <a href="/Documents/Arnav%20Pundir%20(Web%20Developer).pdf" download
-           aria-label="Download Web Development Resume PDF"
-           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold
-                      border border-[rgba(99,102,241,0.35)] text-[#f1f5f9]
-                      hover:border-accent hover:bg-[rgba(99,102,241,0.08)] transition-all duration-200">
-          Web Development Resume
-        </a>
+        {/* Resume Dropdown */}
+        <div className="relative hidden md:block" ref={resumeDropdownRef}>
+          <button 
+            onClick={() => setResumeDropdownOpen(!resumeDropdownOpen)}
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold bg-gradient-to-r from-accent to-accent2 text-white hover:opacity-90 transition-opacity shadow-[0_0_24px_rgba(99,102,241,0.4)]">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Resumes
+            <svg className={`w-4 h-4 ml-1 transition-transform duration-200 ${resumeDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <AnimatePresence>
+            {resumeDropdownOpen && (
+              <motion.div 
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+                className="absolute right-0 z-50 mt-2 w-64 rounded-2xl overflow-hidden backdrop-blur-xl border border-[rgba(99,102,241,0.2)] shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+                style={{ background: 'rgba(11,17,35,0.95)' }}>
+                
+                <a href="/Documents/Arnav Pundir - Resume.pdf" download onClick={() => setResumeDropdownOpen(false)}
+                   className="flex items-center gap-3 px-4 py-3 hover:bg-[rgba(99,102,241,0.1)] transition-colors border-b border-[rgba(99,102,241,0.1)]">
+                  <svg className="w-5 h-5 text-[#a78bfa]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-[#f1f5f9]">Comprehensive Profile</span>
+                  </div>
+                </a>
+
+                <a href="/Documents/Arnav Pundir (Web Developer).pdf" download onClick={() => setResumeDropdownOpen(false)}
+                   className="flex items-center gap-3 px-4 py-3 hover:bg-[rgba(99,102,241,0.1)] transition-colors border-b border-[rgba(99,102,241,0.1)]">
+                  <svg className="w-5 h-5 text-[#38bdf8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-[#f1f5f9]">Full-Stack Developer</span>
+                  </div>
+                </a>
+
+                <a href="/Documents/Arnav_Pundir_Resume.pdf" download onClick={() => setResumeDropdownOpen(false)}
+                   className="flex items-center gap-3 px-4 py-3 hover:bg-[rgba(99,102,241,0.1)] transition-colors">
+                  <svg className="w-5 h-5 text-[#10b981]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-semibold text-[#f1f5f9]">AI & Computer Vision</span>
+                  </div>
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
         {/* Hamburger */}
         <button onClick={() => setMenuOpen(!menuOpen)}
@@ -128,15 +179,23 @@ export default function Navbar() {
                   {label}
                 </a>
               ))}
-              <a href="/Documents/Arnav_Pundir_Resume.pdf" download
-                 className="mt-2 text-center py-3 px-4 rounded-full text-sm font-semibold bg-gradient-to-r from-accent to-accent2 text-white">
-                Download Resume
-              </a>
-              <a href="/Documents/Arnav%20Pundir%20(Web%20Developer).pdf" download
-                 aria-label="Download Web Development Resume PDF"
-                 className="text-center py-3 px-4 rounded-full text-sm font-semibold border border-[rgba(99,102,241,0.35)] text-[#f1f5f9] hover:border-accent hover:bg-[rgba(99,102,241,0.08)] transition-all duration-200">
-                Web Development Resume
-              </a>
+              <div className="mt-2 flex flex-col gap-2">
+                <a href="/Documents/Arnav Pundir - Resume.pdf" download onClick={() => setMenuOpen(false)}
+                   className="flex items-center justify-center gap-2 py-3 px-4 rounded-full text-sm font-semibold bg-gradient-to-r from-accent to-accent2 text-white shadow-[0_0_24px_rgba(99,102,241,0.2)]">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                  Comprehensive Profile
+                </a>
+                <a href="/Documents/Arnav Pundir (Web Developer).pdf" download onClick={() => setMenuOpen(false)}
+                   className="flex items-center justify-center gap-2 py-3 px-4 rounded-full text-sm font-semibold border border-[rgba(99,102,241,0.35)] text-[#f1f5f9] hover:border-accent hover:bg-[rgba(99,102,241,0.08)]">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+                  Full-Stack Developer
+                </a>
+                <a href="/Documents/Arnav_Pundir_Resume.pdf" download onClick={() => setMenuOpen(false)}
+                   className="flex items-center justify-center gap-2 py-3 px-4 rounded-full text-sm font-semibold border border-[rgba(99,102,241,0.35)] text-[#f1f5f9] hover:border-accent hover:bg-[rgba(99,102,241,0.08)]">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                  AI & Computer Vision
+                </a>
+              </div>
             </div>
           </motion.div>
         )}
