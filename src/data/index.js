@@ -6,7 +6,7 @@ export const profile = {
   phone: '+91 70606 75133',
   github: 'https://github.com/ArnavPundir22',
   linkedin: 'https://www.linkedin.com/in/arnav-pundir128ap',
-  cvUrl: '/Documents/Arnav_Pundir_Resume.pdf',
+  cvUrl: '/Documents/Arnav_Pundir_Comprehensive_Resume.pdf',
   photo: '/images/man1.png',
   bio: [
     "I am a Full-Stack Engineer and UI/UX enthusiast with hands-on expertise building intelligent systems and high-performance web applications. My work heavily focuses on crafting seamless user experiences and engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Node.js. I specialize in delivering production-ready projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as complex real-time video and multiplayer applications. Beyond development, I actively contribute to open-source software, having achieved Global Rank 70 in the completed Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between robust engineering, automation, and stunning modern web design."
