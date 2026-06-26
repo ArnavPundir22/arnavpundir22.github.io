@@ -40,9 +40,9 @@ export default function Projects() {
           <div className="w-full lg:w-[420px] flex flex-col gap-4 relative z-10">
             {displayedProjects.map((project) => {
               const isActive = activeProjectId === project.id;
-              
+
               return (
-                <motion.div 
+                <motion.div
                   key={project.id}
                   layout
                   onClick={() => !isActive && setActiveProjectId(project.id)}
@@ -72,26 +72,26 @@ export default function Projects() {
                               </span>
                             )}
                           </div>
-                          
+
                           <p className="text-[#a1a1a6] text-[15px] leading-relaxed mb-8 font-medium">
                             {project.description}
                           </p>
 
                           <div className="flex items-center gap-6">
                             <a href={project.github} target="_blank" rel="noopener noreferrer"
-                               className="text-sm font-medium text-white hover:opacity-80 transition-opacity flex items-center gap-2"
-                               onClick={(e) => e.stopPropagation()}
+                              className="text-sm font-medium text-white hover:opacity-80 transition-opacity flex items-center gap-2"
+                              onClick={(e) => e.stopPropagation()}
                             >
                               GitHub
-                              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                             </a>
                             {project.live && (
                               <a href={project.live} target="_blank" rel="noopener noreferrer"
-                                 className="text-sm font-medium text-[#2997ff] hover:opacity-80 transition-opacity flex items-center gap-2"
-                                 onClick={(e) => e.stopPropagation()}
+                                className="text-sm font-medium text-[#2997ff] hover:opacity-80 transition-opacity flex items-center gap-2"
+                                onClick={(e) => e.stopPropagation()}
                               >
                                 Live Demo
-                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
                               </a>
                             )}
                           </div>
@@ -113,7 +113,7 @@ export default function Projects() {
             })}
 
             {!showAll && visible.length > 6 && (
-              <motion.button 
+              <motion.button
                 layout
                 onClick={() => setShowAll(true)}
                 className="mt-4 px-6 py-4 rounded-full bg-transparent border border-[rgba(255,255,255,0.2)] text-white font-medium hover:bg-[rgba(255,255,255,0.05)] transition-colors w-full lg:w-max mx-auto lg:mx-0"
