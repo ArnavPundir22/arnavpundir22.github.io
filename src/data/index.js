@@ -331,6 +331,14 @@ export const education = [
     current: false,
     description: 'Physics, Chemistry, Mathematics stream with strong foundation in analytical thinking.',
   },
+  {
+    degree: 'Secondary School (Class X)',
+    institution: 'Montfort Sen. Sec. School',
+    location: 'Roorkee, India',
+    period: '2020 – 2022',
+    current: false,
+    description: 'Completed foundational studies with a strong interest in science and technology.',
+  },
 ]
 
 export const certifications = [
