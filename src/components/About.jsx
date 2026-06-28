@@ -114,7 +114,7 @@ export default function About() {
                         </div>
                       </a>
 
-                      <a href="/Documents/Arnav_Pundir_Frontend_Resume.pdf" download onClick={() => setDropdownOpen(false)}
+                      <a href="/Documents/Arnav_Pundir_FullStack_Resume.pdf" download onClick={() => setDropdownOpen(false)}
                          className="flex items-center gap-3 px-4 py-3 hover:bg-[rgba(99,102,241,0.1)] transition-colors border-b border-[rgba(99,102,241,0.1)]">
                         <svg className="w-5 h-5 text-[#38bdf8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
