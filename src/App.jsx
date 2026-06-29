@@ -22,13 +22,16 @@ export default function App() {
   }, [loading]);
 
   return (
-    <div style={{ background: '#060a14' }}>
+    <div className="relative min-h-screen text-slate-100">
+      <div className="aurora-bg"></div>
+      <div className="noise"></div>
+      
       <AnimatePresence mode="wait">
         {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
       </AnimatePresence>
 
       <Navbar />
-      <main>
+      <main className="relative z-10 flex flex-col">
         <Hero />
         <About />
         <Skills />
