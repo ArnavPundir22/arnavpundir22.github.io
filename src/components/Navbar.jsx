@@ -113,7 +113,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute right-0 z-50 mt-3 w-64 rounded-2xl overflow-hidden bg-[#030712]/95 border border-white/10 backdrop-blur-xl shadow-2xl">
+                  className="absolute right-0 z-50 mt-3 w-64 rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-2xl">
                   
                   <div className="p-2 flex flex-col gap-1">
                     <a href="/Documents/Arnav_Pundir_Comprehensive_Resume.pdf" download onClick={() => setResumeDropdownOpen(false)}
