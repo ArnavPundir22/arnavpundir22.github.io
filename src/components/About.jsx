@@ -97,7 +97,7 @@ export default function About() {
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute left-0 bottom-full mb-2 z-50 w-64 rounded-2xl overflow-hidden glass-card p-2 shadow-2xl">
+                      className="absolute left-0 bottom-full mb-2 z-50 w-64 rounded-2xl overflow-hidden bg-[#030712]/95 border border-white/10 backdrop-blur-xl p-2 shadow-2xl">
                       
                       <div className="flex flex-col gap-1">
                         <a href="/Documents/Arnav_Pundir_Comprehensive_Resume.pdf" download onClick={() => setDropdownOpen(false)}
