@@ -176,6 +176,16 @@ export default function Navbar() {
                   <FileText className="w-4 h-4" />
                   Comprehensive Profile
                 </a>
+                <a href="/Documents/Arnav_Pundir_FullStack_Resume.pdf" download onClick={() => setMenuOpen(false)}
+                   className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white transition-colors">
+                  <Code2 className="w-4 h-4 text-cyan-400" />
+                  Full-Stack Developer
+                </a>
+                <a href="/Documents/Arnav_Pundir_AI_Resume.pdf" download onClick={() => setMenuOpen(false)}
+                   className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-semibold bg-white/5 hover:bg-white/10 border border-white/10 text-slate-200 hover:text-white transition-colors">
+                  <BrainCircuit className="w-4 h-4 text-blue-400" />
+                  AI & Computer Vision
+                </a>
               </div>
             </div>
           </motion.div>
