@@ -106,16 +106,16 @@ export const projects = [
   },
   {
     id: 1,
-    title: 'BaatCheet Real-Time Video Chat App',
+    title: 'AuraMeet Real-Time Video Chat App',
     description:
       'Architected a scalable real-time messaging and peer-to-peer video streaming application using Node.js, Express, WebRTC, and Redis. Features an "ephemeral" data lifecycle that automatically self-destructs chat logs upon disconnect. Recently engineered a real-time multiplayer Air Draw feature using the Canvas API for synchronized hand-tracked drawing over video feeds, and integrated a comprehensive dark-mode glassmorphic emoji gallery.',
     tags: ['Node.js', 'Express', 'WebRTC', 'Redis', 'Canvas API'],
     category: 'Full-Stack',
-    github: 'https://github.com/ArnavPundir22/BaatCheet',
-    live: 'https://baatcheet-88e9.onrender.com',
+    github: 'https://github.com/ArnavPundir22/AuraMeet',
+    live: 'https://aurameet-88e9.onrender.com',
     featured: true,
-    image: '/images/BaatCheet.png',
-    imageAlt: 'BaatCheet Real-Time Video Chat App interface showing ephemeral video streams and chat.',
+    image: '/images/AuraMeet.png',
+    imageAlt: 'AuraMeet Real-Time Video Chat App interface showing ephemeral video streams and chat.',
   },
   {
     id: 2,
