@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { profile, roles } from '../data'
 import { Mail, ArrowDown, ExternalLink } from 'lucide-react'
+import MagneticButton from './MagneticButton'
 
 const GithubIcon = ({ className }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -130,25 +131,23 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-4 mb-12">
-              <motion.a href="#projects"
-                 whileHover={{ scale: 1.02, y: -2 }}
-                 whileTap={{ scale: 0.98 }}
+              <MagneticButton
+                 href="#projects"
                  onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }) }}
-                 className="flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white
+                 className="px-8 py-4 rounded-xl font-semibold text-white
                             bg-white/10 hover:bg-white/15 border border-white/20
-                            backdrop-blur-md transition-all duration-300">
+                            backdrop-blur-md transition-all duration-300 z-50">
                 View My Work
                 <ArrowDown className="w-4 h-4" />
-              </motion.a>
-              <motion.a href="#contact"
-                 whileHover={{ scale: 1.02, y: -2 }}
-                 whileTap={{ scale: 0.98 }}
+              </MagneticButton>
+              <MagneticButton
+                 href="#contact"
                  onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
-                 className="flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white
+                 className="px-8 py-4 rounded-xl font-semibold text-white
                             bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400
-                            shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-300">
+                            shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-300 z-50">
                 Get In Touch
-              </motion.a>
+              </MagneticButton>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex items-center gap-4">

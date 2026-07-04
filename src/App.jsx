@@ -9,6 +9,7 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LoadingScreen from './components/LoadingScreen'
+import ScrollPath from './components/ScrollPath'
 
 export default function App() {
   const [loading, setLoading] = useState(true)
@@ -25,6 +26,7 @@ export default function App() {
     <div className="relative min-h-screen text-slate-100">
       <div className="aurora-bg"></div>
       <div className="noise"></div>
+      <ScrollPath />
       
       <AnimatePresence mode="wait">
         {loading && <LoadingScreen onComplete={() => setLoading(false)} />}

@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { profile } from '../data'
 import { Download, GraduationCap, MapPin, Briefcase, Rocket, FileText, Code2, BrainCircuit } from 'lucide-react'
+import ScrollRevealText from './ScrollRevealText'
 
 const fadeUp = (delay = 0) => ({
   hidden: { opacity: 0, y: 40 },
@@ -60,9 +61,11 @@ export default function About() {
               <h3 className="text-2xl font-display font-semibold text-white mb-4">My Journey</h3>
               <div className="space-y-4">
                 {profile.bio.map((para, i) => (
-                  <p key={i} className="text-slate-400 leading-relaxed">
-                    {para}
-                  </p>
+                  <ScrollRevealText 
+                    key={i} 
+                    text={para} 
+                    className="text-slate-400 leading-relaxed text-lg" 
+                  />
                 ))}
               </div>
             </div>

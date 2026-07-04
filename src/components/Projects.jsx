@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, forwardRef } from 'react'
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { projects, projectCategories } from '../data'
-import { ExternalLink, Sparkles } from 'lucide-react'
+import { ExternalLink, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const GithubIcon = ({ className }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -69,6 +69,7 @@ const TiltCard = forwardRef(({ project, onClick }, externalRef) => {
           src={project.image || "/images/placeholder.jpg"} 
           alt={project.title}
           className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-110"
+          draggable={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
       </div>
@@ -97,7 +98,7 @@ const TiltCard = forwardRef(({ project, onClick }, externalRef) => {
           {project.description}
         </p>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative z-50">
           {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer"
                className="flex items-center gap-2 text-sm font-semibold text-white hover:text-cyan-400 transition-colors bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl backdrop-blur-md"
@@ -124,14 +125,136 @@ const TiltCard = forwardRef(({ project, onClick }, externalRef) => {
   )
 })
 
+const swipeConfidenceThreshold = 10000;
+const swipePower = (offset, velocity) => {
+  return Math.abs(offset) * velocity;
+};
+
+const FeaturedCarousel = ({ items }) => {
+  const [[page, direction], setPage] = useState([0, 0]);
+
+  // Infinite wrap around index
+  const activeIndex = ((page % items.length) + items.length) % items.length;
+
+  const paginate = (newDirection) => {
+    setPage([page + newDirection, newDirection]);
+  };
+
+  return (
+    <div 
+      className="relative h-[450px] md:h-[500px] w-full flex items-center justify-center overflow-hidden perspective-1000 mb-8"
+    >
+      <AnimatePresence initial={false} custom={direction}>
+        {items.map((project, index) => {
+          // Calculate the shortest circular distance for infinite loop
+          let distance = index - activeIndex;
+          const half = items.length / 2;
+          
+          if (distance > half) {
+            distance -= items.length;
+          } else if (distance < -half) {
+            distance += items.length;
+          }
+
+          const offset = distance;
+
+          if (Math.abs(offset) > 3) return null; // Don't render cards too far away
+
+          return (
+            <motion.div
+              key={project.id}
+              className="absolute w-[90%] md:w-[70%] max-w-[600px] cursor-grab active:cursor-grabbing"
+              initial={false}
+              animate={{
+                x: `${offset * 70}%`, // stagger horizontally
+                scale: 1 - Math.abs(offset) * 0.15,
+                rotateY: offset * -25, // 3D tilt towards center
+                zIndex: 100 - Math.abs(offset),
+                opacity: Math.abs(offset) >= 3 ? 0 : 1 - Math.abs(offset) * 0.35,
+                filter: `blur(${Math.abs(offset) * 4}px)`,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 30,
+              }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={1}
+              onDragEnd={(e, { offset: dragOffset, velocity }) => {
+                // More sensitive swipe detection
+                const swipe = dragOffset.x;
+                if (swipe < -50 || velocity.x < -500) {
+                  paginate(1);
+                } else if (swipe > 50 || velocity.x > 500) {
+                  paginate(-1);
+                }
+              }}
+            >
+              <div className={offset !== 0 ? "pointer-events-none" : ""}>
+                <TiltCard project={project} />
+              </div>
+            </motion.div>
+          )
+        })}
+      </AnimatePresence>
+
+      {/* Navigation Buttons */}
+      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 md:px-12 pointer-events-none z-[200]">
+        <button 
+          onClick={() => paginate(-1)}
+          aria-label="Previous project"
+          className="w-10 h-10 md:w-14 md:h-14 rounded-full glass-card flex items-center justify-center text-white pointer-events-auto hover:bg-white/20 hover:text-cyan-300 transition-all hover:scale-110 active:scale-95 shadow-[0_0_20px_rgba(34,211,238,0.2)] border border-cyan-400/20"
+        >
+          <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+        </button>
+        <button 
+          onClick={() => paginate(1)}
+          aria-label="Next project"
+          className="w-10 h-10 md:w-14 md:h-14 rounded-full glass-card flex items-center justify-center text-white pointer-events-auto hover:bg-white/20 hover:text-cyan-300 transition-all hover:scale-110 active:scale-95 shadow-[0_0_20px_rgba(34,211,238,0.2)] border border-cyan-400/20"
+        >
+          <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+        </button>
+      </div>
+
+      {/* Pagination Indicators */}
+      <div className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 flex gap-3 z-[200]">
+        {items.map((_, idx) => (
+          <button
+            key={idx}
+            aria-label={`Go to project ${idx + 1}`}
+            onClick={() => {
+              // Calculate the shortest path to the clicked indicator
+              const currentIdx = activeIndex;
+              const targetIdx = idx;
+              let diff = targetIdx - currentIdx;
+              
+              if (diff > items.length / 2) diff -= items.length;
+              if (diff < -items.length / 2) diff += items.length;
+              
+              paginate(diff);
+            }}
+            className={`h-2 rounded-full transition-all duration-500 ease-out ${idx === activeIndex ? 'w-10 bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.8)]' : 'w-2 bg-white/20 hover:bg-white/50 hover:scale-125'}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function Projects() {
   const [filter, setFilter] = useState('All')
-  const visible = filter === 'All' ? projects : projects.filter(p => p.category === filter)
-  const [showAll, setShowAll] = useState(false)
-  const displayedProjects = showAll ? visible : visible.slice(0, 6)
+  
+  const filteredProjects = filter === 'All' ? projects : projects.filter(p => p.category === filter)
+  
+  const featured = filteredProjects.filter(p => p.featured)
+  const rest = filteredProjects.filter(p => !p.featured)
 
+  const [showGrid, setShowGrid] = useState(false)
+
+  // Reset grid visibility when filter changes
   useEffect(() => {
-    setShowAll(false)
+    setShowGrid(false)
   }, [filter])
 
   return (
@@ -140,7 +263,7 @@ export default function Projects() {
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header and Filter */}
         <div className="text-center mb-16">
@@ -164,29 +287,69 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid */}
-        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000">
-          <AnimatePresence mode="popLayout">
-            {displayedProjects.map((project) => (
-              <TiltCard key={project.id} project={project} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        {/* 3D Carousel for Featured Projects */}
+        <AnimatePresence mode="wait">
+          {featured.length > 0 ? (
+            <motion.div 
+              key={`carousel-${filter}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              className="mb-24"
+            >
+              <FeaturedCarousel items={featured} />
+            </motion.div>
+          ) : (
+            <motion.div 
+              key={`empty-${filter}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center text-slate-400 py-12"
+            >
+              No featured projects in this category.
+            </motion.div>
+          )}
+        </AnimatePresence>
 
-        {/* View More Button */}
-        {!showAll && visible.length > 6 && (
-          <div className="mt-16 flex justify-center">
+        {/* View More Grid Toggle Button */}
+        {rest.length > 0 && (
+          <div className="flex justify-center mb-12 relative z-20">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setShowAll(true)}
-              className="px-8 py-4 rounded-xl glass-card font-semibold text-white hover:bg-white/10 transition-all flex items-center gap-2 group"
+              onClick={() => setShowGrid(!showGrid)}
+              className="px-8 py-4 rounded-xl glass-card font-semibold text-white hover:bg-white/10 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all flex items-center gap-3 group border border-white/10 bg-black/30 backdrop-blur-xl"
             >
-              View {visible.length - 6} More Projects
-              <span className="group-hover:translate-y-1 transition-transform">↓</span>
+              {showGrid ? 'Hide Other Projects' : `Show All Projects (${rest.length})`}
+              <motion.span 
+                animate={{ rotate: showGrid ? 180 : 0 }} 
+                className="transition-transform text-cyan-400"
+              >
+                ↓
+              </motion.span>
             </motion.button>
           </div>
         )}
+
+        {/* Expandable Grid for Rest Projects */}
+        <AnimatePresence>
+          {showGrid && rest.length > 0 && (
+            <motion.div
+              initial={{ height: 0, opacity: 0, scale: 0.95 }}
+              animate={{ height: 'auto', opacity: 1, scale: 1 }}
+              exit={{ height: 0, opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="overflow-hidden"
+            >
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-1000 py-8">
+                {rest.map((project) => (
+                  <TiltCard key={project.id} project={project} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
       </div>
     </section>
   )
