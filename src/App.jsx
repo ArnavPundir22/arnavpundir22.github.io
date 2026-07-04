@@ -12,7 +12,7 @@ import LoadingScreen from './components/LoadingScreen'
 import ScrollPath from './components/ScrollPath'
 
 export default function App() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false) // Disabled loading screen for better Lighthouse performance
 
   useEffect(() => {
     if (loading) {

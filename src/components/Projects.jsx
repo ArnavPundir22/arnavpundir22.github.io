@@ -70,6 +70,7 @@ const TiltCard = forwardRef(({ project, onClick }, externalRef) => {
           alt={project.title}
           className="w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-opacity duration-500 group-hover:scale-110"
           draggable={false}
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
       </div>
