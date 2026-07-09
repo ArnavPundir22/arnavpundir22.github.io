@@ -92,6 +92,18 @@ export const skills = {
 
 export const projects = [
   {
+    id: 18,
+    title: 'ZeroLag: Offline-First Collaborative Task Management',
+    description: 'A blazing-fast, local-first project management platform built with React, RxDB, and Supabase. Features a zero-latency UI with offline-first background sync, real-time collaboration with live cursors, AI-powered magic import via Gemini, and seamless 1-click video conferencing integration (AuraMeet). Fully functional as an installable PWA with premium mesh-gradient glassmorphism.',
+    tags: ['React', 'TypeScript', 'RxDB', 'Supabase', 'Clerk', 'Tailwind CSS'],
+    category: 'Full-Stack',
+    github: 'https://github.com/ArnavPundir22/ZeroLag',
+    live: null,
+    featured: true,
+    image: '/images/ZeroLag.png',
+    imageAlt: 'ZeroLag collaborative project management platform with offline-first architecture',
+  },
+  {
     id: 17,
     title: 'Occasions Event Registration Platform',
     description:
