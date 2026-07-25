@@ -1,0 +1,14 @@
+# Arnav Pundir Portfolio
+
+> Full-Stack Developer & Open-Source Contributor. I build intelligent systems and high-performance web applications.
+
+## Navigation Links
+- [Home](https://arnavpundir22.github.io/)
+- [Projects](https://arnavpundir22.github.io/#projects)
+- [About](https://arnavpundir22.github.io/#about)
+- [Skills](https://arnavpundir22.github.io/#skills)
+- [Contact](https://arnavpundir22.github.io/#contact)
+
+## External Links
+- [GitHub](https://github.com/ArnavPundir22)
+- [LinkedIn](https://www.linkedin.com/in/arnav-pundir128ap)
