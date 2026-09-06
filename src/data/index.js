@@ -1,15 +1,17 @@
 export const profile = {
   name: 'Arnav Pundir',
-  tagline: 'Full-Stack Developer & Open-Source Contributor',
+  tagline: 'Competitive Coding Lead @ D-Coders Squad | AI & Full-Stack Engineer',
   location: 'Roorkee, India',
   email: 'arnavp128@gmail.com',
   phone: '+91 70606 75133',
   github: 'https://github.com/ArnavPundir22',
   linkedin: 'https://www.linkedin.com/in/arnav-pundir128ap',
+  dcoders: 'https://dcoderssquad.com',
   cvUrl: '/Documents/Arnav_Pundir_Comprehensive_Resume.pdf',
   photo: '/images/man1.png',
+  photoAlt: 'Arnav Pundir - Competitive Coding Lead at D-Coders Squad & AI Engineer',
   bio: [
-    "I am a Full-Stack Engineer and UI/UX enthusiast with hands-on expertise building intelligent systems and high-performance web applications. My work heavily focuses on crafting seamless user experiences and engineering scalable, real-time platforms using React.js, Next.js, TypeScript, and Node.js. I specialize in delivering production-ready projects, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as complex real-time video and multiplayer applications. Beyond development, I actively contribute to open-source software, having achieved Global Rank 70 in the completed Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, Roorkee, I am passionate about bridging the gap between robust engineering, automation, and stunning modern web design."
+    "I am a Full-Stack Engineer, AI Specialist, and the Competitive Coding Lead at D-Coders Squad (the official student-led technical community of COER University, Roorkee). My work focuses on mentoring developers, organizing competitive programming initiatives, building intelligent systems, and engineering high-performance web applications. I specialize in delivering production-ready projects with React.js, Next.js, TypeScript, Node.js, and Python, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as complex real-time video and multiplayer applications. Beyond technical leadership, I actively contribute to open-source software, having achieved Global Rank 70 in Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, I am passionate about bridging the gap between algorithm optimization, robust software architecture, and modern web design."
   ],
   stats: [
     { value: 13, suffix: '+', label: 'Projects Built' },
@@ -20,14 +22,25 @@ export const profile = {
 }
 
 export const roles = [
+  'Competitive Coding Lead @ D-Coders Squad',
   'Full-Stack Developer',
-  'Frontend Specialist',
+  'AI & Computer Vision Engineer',
   'Open-Source Contributor',
   '3D WebGL Enthusiast',
-  'AI & Computer Vision Engineer',
 ]
 
 export const experience = [
+  {
+    title: 'Competitive Coding Lead',
+    company: 'D-Coders Squad (COER University)',
+    location: 'Roorkee, India',
+    period: 'Aug 2024 – Present',
+    description: [
+      'Serving as Competitive Coding Lead for D-Coders Squad, the official technical community of COER University, mentoring members in algorithm optimization and data structures.',
+      'Organizing competitive programming contests, code reviews, and technical workshops to foster engineering excellence across Web Dev, AI/ML, and Open Source.',
+      'Leading student teams in national coding challenges and collaborative open-source initiatives.'
+    ]
+  },
   {
     title: 'Freelance Frontend Developer',
     company: 'Client & Independent Projects',

@@ -171,14 +171,16 @@ export default function Hero() {
                    whileHover={{ y: -10, rotateY: 5, rotateX: 5 }}
                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
                 <div className="rounded-3xl overflow-hidden relative">
-                  <img src="/images/man1.png" alt="Arnav Pundir"
+                  <img src="/images/man1.png" 
+                       alt="Arnav Pundir - Competitive Coding Lead at D-Coders Squad & AI Engineer"
+                       title="Arnav Pundir - Competitive Coding Lead & AI Engineer"
                        className="w-[280px] sm:w-[320px] xl:w-[400px] object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
                   
                   {/* Overlay badge */}
                   <div className="absolute bottom-4 left-4 right-4">
                     <div className="glass-card rounded-2xl p-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                      <p className="text-xs text-slate-300 mb-1">Currently studying at</p>
-                      <p className="text-sm font-semibold text-white">COER University, Roorkee</p>
+                      <p className="text-xs text-cyan-400 font-semibold mb-0.5">Competitive Coding Lead</p>
+                      <p className="text-sm font-bold text-white">D-Coders Squad @ COER University</p>
                       <div className="flex items-center gap-2 mt-2">
                         <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded text-[10px] font-bold uppercase tracking-wider">B.Tech CSE</span>
                         <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-[10px] font-bold uppercase tracking-wider">2024–2028</span>

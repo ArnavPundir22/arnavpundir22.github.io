@@ -136,7 +136,7 @@ export default function About() {
           {[
             { icon: GraduationCap, label: 'Education', value: 'COER University', sub: 'B.Tech CSE', color: 'text-purple-400', bg: 'bg-purple-500/10' },
             { icon: MapPin, label: 'Location', value: 'Roorkee, India', sub: 'Open to remote', color: 'text-cyan-400', bg: 'bg-cyan-500/10' },
-            { icon: Briefcase, label: 'Experience', value: '2+ Years', sub: 'Building real systems', color: 'text-blue-400', bg: 'bg-blue-500/10' },
+            { icon: Briefcase, label: 'Leadership', value: 'D-Coders Squad', sub: 'Competitive Coding Lead', color: 'text-blue-400', bg: 'bg-blue-500/10' },
             { icon: Rocket, label: 'Focus Area', value: 'AI + Full-Stack', sub: 'CV & Web Systems', color: 'text-pink-400', bg: 'bg-pink-500/10' },
           ].map((item, idx) => (
             <motion.div 

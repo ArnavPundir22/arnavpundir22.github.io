@@ -1,9 +1,13 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { education, certifications } from '../data'
-import { BookOpen, Award, CheckCircle2 } from 'lucide-react'
+import { education, certifications, experience } from '../data'
+import { BookOpen, Award, CheckCircle2, Briefcase } from 'lucide-react'
 
 function TimelineItem({ item, i, total, inView }) {
+  const title = item.degree || item.title
+  const organization = item.institution || item.company
+  const descriptionLines = Array.isArray(item.description) ? item.description : [item.description]
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -40 }}
@@ -20,7 +24,7 @@ function TimelineItem({ item, i, total, inView }) {
       <div className="absolute left-0 top-3 w-8 h-8 rounded-full flex items-center justify-center
                       border-2 border-cyan-500 bg-[#060a14] group-hover:bg-cyan-500/10 transition-colors"
            style={{ boxShadow: item.current ? '0 0 16px rgba(34,211,238,0.4)' : 'none' }}>
-        {item.current
+        {item.current || item.period?.includes('Present')
           ? <span className="w-3 h-3 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
           : <span className="w-2 h-2 rounded-full bg-cyan-500/50 group-hover:bg-cyan-400 transition-colors" />}
       </div>
@@ -31,8 +35,8 @@ function TimelineItem({ item, i, total, inView }) {
                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
         <div className="flex flex-wrap items-start justify-between gap-2 mb-3">
           <div>
-            <h3 className="font-semibold text-white text-lg leading-snug group-hover:text-cyan-400 transition-colors">{item.degree}</h3>
-            <p className="text-cyan-300 text-sm font-medium mt-1">{item.institution}</p>
+            <h3 className="font-semibold text-white text-lg leading-snug group-hover:text-cyan-400 transition-colors">{title}</h3>
+            <p className="text-cyan-300 text-sm font-medium mt-1">{organization}</p>
           </div>
           <div className="text-right flex-shrink-0">
             <span className="text-xs px-4 py-1.5 rounded-full font-bold tracking-wider uppercase
@@ -42,13 +46,13 @@ function TimelineItem({ item, i, total, inView }) {
             <p className="text-slate-400 text-xs mt-2 font-medium">{item.location}</p>
           </div>
         </div>
-        {item.description && (
-          <p className="text-slate-300 text-sm leading-relaxed mt-3">{item.description}</p>
-        )}
-        {item.current && (
+        {descriptionLines.map((desc, idx) => (
+          <p key={idx} className="text-slate-300 text-sm leading-relaxed mt-2">{desc}</p>
+        ))}
+        {(item.current || item.period?.includes('Present')) && (
           <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/20 text-xs font-bold text-green-400 tracking-wide uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-            Currently Enrolled
+            Active Role
           </div>
         )}
       </motion.div>
@@ -99,14 +103,30 @@ export default function Education() {
             Background
           </span>
           <h2 className="section-heading">
-            Education & <span className="gradient-text">Certifications</span>
+            Experience, Education & <span className="gradient-text">Certifications</span>
           </h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-16">
 
-          {/* Education timeline */}
+          {/* Timeline column */}
           <div>
+            {/* Leadership & Experience */}
+            <motion.h3 initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: 0.1 }}
+              className="text-sm font-bold text-slate-300 uppercase tracking-widest mb-10 flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                <Briefcase className="w-5 h-5" />
+              </div>
+              Leadership & Experience
+            </motion.h3>
+            <div className="relative mb-14">
+              {experience.map((item, i) => (
+                <TimelineItem key={i} item={item} i={i} total={experience.length} inView={inView} />
+              ))}
+            </div>
+
+            {/* Academic Journey */}
             <motion.h3 initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.1 }}
               className="text-sm font-bold text-slate-300 uppercase tracking-widest mb-10 flex items-center gap-3">
