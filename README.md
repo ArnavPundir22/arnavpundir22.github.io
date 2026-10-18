@@ -38,5 +38,4 @@ npm run preview
 GitHub Actions (`.github/workflows/deploy.yml`) installs dependencies, builds the site, and publishes built files for GitHub Pages.
 
 ## Troubleshooting
-- If `npm run dev` starts but the browser shows 404, ensure you are running commands from the repository root:
-  `/home/runner/work/arnavpundir22.github.io/arnavpundir22.github.io`
+- If `npm run dev` starts but the browser shows 404, ensure you are running commands from the repository root directory (`arnavpundir22.github.io`).

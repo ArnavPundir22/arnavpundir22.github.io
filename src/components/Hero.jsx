@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { profile, roles } from '../data'
-import { Mail, ArrowDown, ExternalLink } from 'lucide-react'
+import { profile } from '../data'
+import { ArrowDown, ExternalLink, Mail, Terminal, Sparkles, ShieldCheck } from 'lucide-react'
 import MagneticButton from './MagneticButton'
 
 const GithubIcon = ({ className }) => (
@@ -16,195 +15,207 @@ const LinkedinIcon = ({ className }) => (
   </svg>
 )
 
-/* ---------- Typewriter ---------- */
-function Typewriter() {
-  const [display, setDisplay] = useState('')
-  const [rIdx, setRIdx]       = useState(0)
-  const [cIdx, setCIdx]       = useState(0)
-  const [del,  setDel]        = useState(false)
-
-  useEffect(() => {
-    const word  = roles[rIdx]
-    const timer = setTimeout(() => {
-      if (!del) {
-        const next = word.slice(0, cIdx + 1)
-        setDisplay(next)
-        if (next === word) {
-          setTimeout(() => setDel(true), 2000)
-        } else {
-          setCIdx(c => c + 1)
-        }
-      } else {
-        const next = word.slice(0, cIdx - 1)
-        setDisplay(next)
-        if (next === '') {
-          setDel(false)
-          setRIdx(r => (r + 1) % roles.length)
-          setCIdx(0)
-        } else {
-          setCIdx(c => c - 1)
-        }
-      }
-    }, del ? 40 : 80)
-    return () => clearTimeout(timer)
-  }, [cIdx, del, rIdx])
-
-  return (
-    <span className="inline-flex items-center font-display text-2xl md:text-3xl font-medium text-purple-400">
-      {display}<span className="cursor-blink" />
-    </span>
-  )
+const fadeUp = { 
+  hidden: { opacity: 0, y: 25 }, 
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } 
+  } 
 }
-
-/* ---------- Social link ---------- */
-function SocialLink({ href, label, icon: Icon }) {
-  return (
-    <motion.a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-       whileHover={{ y: -3, scale: 1.05 }}
-       whileTap={{ scale: 0.95 }}
-       className="w-12 h-12 rounded-xl flex items-center justify-center
-                  glass-card text-slate-400 hover:text-cyan-400
-                  transition-colors duration-300 group">
-      <Icon className="w-5 h-5 group-hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.8)] transition-all" />
-    </motion.a>
-  )
-}
-
-const fadeUp   = { hidden: { opacity: 0, y: 30 }, show: { opacity: 1, y: 0 } }
-const fadeLeft = { hidden: { opacity: 0, x: 60 }, show: { opacity: 1, x: 0 } }
 
 export default function Hero() {
+  const scrollTo = (id) => {
+    window.dispatchEvent(new CustomEvent('load-below-fold'))
+    const target = document.querySelector(id)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      setTimeout(() => {
+        document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 120)
+    }
+  }
+
   return (
-    <section id="home"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
-      
-      {/* 3D floating background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div 
-          animate={{ 
-            y: [-20, 20, -20],
-            rotate: [0, 5, 0]
-          }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 -right-32 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]"
-        />
-        <motion.div 
-          animate={{ 
-            y: [20, -20, 20],
-            rotate: [0, -5, 0]
-          }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/4 -left-32 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px]"
-        />
-      </div>
+    <section id="home" className="relative min-h-[95dvh] flex items-center pt-24 sm:pt-28 pb-12 sm:pb-16 overflow-hidden">
+      {/* Background glow highlights */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/3 -right-32 w-[450px] h-[450px] bg-purple-500/10 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-8 items-center">
 
-          {/* ── Text ── */}
-          <motion.div variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
-                      initial="hidden" animate="show">
+          {/* ── Text Content (Immediate Paint for top LCP & FCP) ── */}
+          <div className="flex flex-col">
+            {/* Primary Role Pill & Live Availability */}
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-xs font-mono font-semibold text-cyan-300 shadow-[0_0_15px_rgba(34,211,238,0.15)]">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                <span>AI Engineer & Full Stack Engineer</span>
+              </div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full glass-card border-white/10 text-xs font-mono text-slate-300">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
+                <span>Available for High-Impact Roles</span>
+              </div>
+            </div>
 
-            <motion.div variants={fadeUp}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8
-                         glass-card text-cyan-400 text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
-              Available for opportunities
-            </motion.div>
+            {/* Display Headline */}
+            <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.12] sm:leading-[1.08] mb-6">
+              Elite AI & Full-Stack <span className="gradient-text">Systems Architect</span> Building World-Class Software.
+            </h1>
 
-            <motion.h1 variants={fadeUp}
-              className="font-display text-5xl md:text-6xl xl:text-7xl font-bold leading-tight mb-4 tracking-tight">
-              Hi, I'm{' '}
-              <br className="hidden md:block" />
-              <span className="gradient-text">Arnav Pundir</span>
-            </motion.h1>
+            {/* Subtext */}
+            <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mb-8 font-normal">
+              I am <span className="text-white font-semibold">{profile.name}</span>, an exceptional <strong className="text-cyan-300 font-semibold">AI Engineer & Full Stack Engineer</strong> celebrated for engineering high-throughput distributed systems, real-time computer vision engines, and resilient offline-first platforms. Additionally, I mentor over 200 developers in algorithms as the Competitive Coding Lead at{' '}
+              <a href={profile.dcoders} target="_blank" rel="noopener noreferrer" className="text-slate-200 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-400/40 font-medium">
+                D-Coders Squad
+              </a>.
+            </p>
 
-            <motion.div variants={fadeUp} className="mb-6 h-10">
-              <Typewriter />
-            </motion.div>
+            {/* Key Accomplishment Pills */}
+            <div className="flex flex-wrap gap-2 mb-8 sm:mb-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono font-medium">
+                <Terminal className="w-3.5 h-3.5 text-cyan-400" />
+                Full-Stack & Computer Vision
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-mono font-medium">
+                <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                Global Rank #70 · NSoC '26
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-mono font-medium">
+                <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+                Lead @ D-Coders Squad
+              </span>
+            </div>
 
-            <motion.p variants={fadeUp}
-              className="text-slate-400 text-lg leading-relaxed mb-10 max-w-xl font-light">
-              I build end-to-end AI systems — face recognition pipelines, real-time
-              computer vision apps, and full-stack web platforms using Python, Flask,
-              and React.js. B.Tech CSE student at <span className="text-white font-medium">COER University</span>.
-            </motion.p>
-
-            <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-4 mb-12">
+            {/* CTAs & Socials */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8">
               <MagneticButton
-                 href="#projects"
-                 onClick={(e) => { e.preventDefault(); document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' }) }}
-                 className="px-8 py-4 rounded-xl font-semibold text-white
-                            bg-white/10 hover:bg-white/15 border border-white/20
-                            backdrop-blur-md transition-all duration-300 z-50">
-                View My Work
+                href="#projects"
+                onClick={(e) => { e.preventDefault(); scrollTo('#projects') }}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl font-semibold text-sm text-slate-950 bg-cyan-400 hover:bg-cyan-300 shadow-[0_0_25px_rgba(34,211,238,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 justify-center text-center"
+              >
+                <span>View Selected Work</span>
                 <ArrowDown className="w-4 h-4" />
               </MagneticButton>
+
               <MagneticButton
-                 href="#contact"
-                 onClick={(e) => { e.preventDefault(); document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' }) }}
-                 className="px-8 py-4 rounded-xl font-semibold text-white
-                            bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400
-                            shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all duration-300 z-50">
-                Get In Touch
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl font-semibold text-sm text-white glass-card hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300 justify-center text-center"
+              >
+                <span>Get In Touch</span>
               </MagneticButton>
-            </motion.div>
 
-            <motion.div variants={fadeUp} className="flex items-center gap-4">
-              <SocialLink href="https://github.com/ArnavPundir22" label="GitHub" icon={GithubIcon} />
-              <SocialLink href="https://www.linkedin.com/in/arnav-pundir128ap" label="LinkedIn" icon={LinkedinIcon} />
-              <SocialLink href="mailto:arnavp128@gmail.com" label="Email" icon={Mail} />
-            </motion.div>
-          </motion.div>
+              <div className="flex items-center justify-center sm:justify-start gap-2 pt-2 sm:pt-0 sm:pl-2">
+                <a
+                  href={profile.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
+                  className="w-11 h-11 rounded-2xl flex items-center justify-center glass-card hover:bg-white/10 text-slate-300 hover:text-cyan-400 border border-white/10 transition-colors"
+                >
+                  <GithubIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={profile.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
+                  className="w-11 h-11 rounded-2xl flex items-center justify-center glass-card hover:bg-white/10 text-slate-300 hover:text-cyan-400 border border-white/10 transition-colors"
+                >
+                  <LinkedinIcon className="w-4 h-4" />
+                </a>
+                <a
+                  href={`mailto:${profile.email}`}
+                  aria-label="Email Me Directly"
+                  className="w-11 h-11 rounded-2xl flex items-center justify-center glass-card hover:bg-white/10 text-slate-300 hover:text-cyan-400 border border-white/10 transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
 
-          {/* ── Photo card ── */}
-          <motion.div variants={fadeLeft} initial="hidden" animate="show"
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-            className="flex justify-center lg:justify-end">
-            <div className="relative group">
-              {/* Glow ring */}
-              <div className="absolute -inset-1 rounded-3xl opacity-50 group-hover:opacity-100 blur-2xl transition-opacity duration-500
-                              bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500" />
-              
-              {/* Card */}
-              <motion.div className="relative rounded-[2rem] overflow-hidden glass-card p-2"
-                   whileHover={{ y: -10, rotateY: 5, rotateX: 5 }}
-                   transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
-                <div className="rounded-3xl overflow-hidden relative">
-                  <img src="/images/man1.png" 
-                       alt="Arnav Pundir - Competitive Coding Lead at D-Coders Squad & AI Engineer"
-                       title="Arnav Pundir - Competitive Coding Lead & AI Engineer"
-                       className="w-[280px] sm:w-[320px] xl:w-[400px] object-cover scale-105 group-hover:scale-100 transition-transform duration-700" />
+          {/* ── Visual Showcase Card (Immediate Render for instant LCP) ── */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-[380px] sm:max-w-[420px]">
+              {/* Outer decorative ambient glow */}
+              <div className="absolute -inset-1.5 rounded-[2.5rem] bg-gradient-to-tr from-cyan-500/30 via-blue-500/20 to-purple-500/30 blur-2xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+              {/* Main Card Shell */}
+              <div className="relative rounded-[2.5rem] glass-card p-4 sm:p-5 border border-white/10 shadow-2xl overflow-hidden bg-slate-950/70">
+                {/* Image Frame */}
+                <div className="rounded-[2rem] overflow-hidden relative aspect-[4/4.6] bg-slate-900 border border-white/10 group">
+                  <img
+                    src={profile.photo}
+                    alt={profile.photoAlt}
+                    title={profile.photoAlt}
+                    width="400"
+                    height="460"
+                    loading="eager"
+                    decoding="async"
+                    fetchpriority="high"
+                    className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700"
+                  />
                   
-                  {/* Overlay badge */}
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="glass-card rounded-2xl p-4 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                      <p className="text-xs text-cyan-400 font-semibold mb-0.5">Competitive Coding Lead</p>
-                      <p className="text-sm font-bold text-white">D-Coders Squad @ COER University</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded text-[10px] font-bold uppercase tracking-wider">B.Tech CSE</span>
-                        <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded text-[10px] font-bold uppercase tracking-wider">2024–2028</span>
-                      </div>
+                  {/* Subtle bottom shadow overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+
+                  {/* Overlaid Role Card */}
+                  <div className="absolute bottom-3 left-3 right-3 p-3.5 rounded-2xl glass-card border border-white/15 backdrop-blur-xl bg-slate-950/85">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[11px] font-mono uppercase tracking-wider text-cyan-400 font-bold">
+                        Primary Focus
+                      </span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-cyan-400/10 text-cyan-300 border border-cyan-400/20">
+                        AI & Web
+                      </span>
+                    </div>
+                    <div className="text-sm font-bold text-white leading-tight">
+                      AI & Full-Stack Engineer
+                    </div>
+                    <div className="text-xs text-slate-300 font-medium mt-0.5 flex items-center gap-1.5">
+                      <span className="text-slate-400">Competitive Coding Lead</span>
+                      <span className="text-slate-600">•</span>
+                      <span className="text-cyan-300/90">D-Coders</span>
                     </div>
                   </div>
                 </div>
-              </motion.div>
+
+                {/* Micro Terminal Bar below portrait */}
+                <div className="mt-3 px-3 py-2.5 rounded-2xl bg-white/[0.03] border border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                    <span className="text-slate-300">stack: python · react · webrtc · yolo</span>
+                  </div>
+                  <span className="text-cyan-400 font-semibold text-[11px]">v2.0</span>
+                </div>
+              </div>
             </div>
-          </motion.div>
+          </div>
 
         </div>
 
-        {/* ── Stats strip ── */}
+        {/* ── Key Metrics Strip ── */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.7 }}
-          className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4">
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4"
+        >
           {profile.stats.map(({ value, suffix, label }) => (
-            <div key={label} className="glass-card rounded-2xl flex flex-col items-center justify-center py-8 px-4 group glass-card-hover">
-              <span className="gradient-text font-display text-4xl font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
+            <div
+              key={label}
+              className="glass-card rounded-2xl p-3.5 sm:p-5 border border-white/5 hover:border-cyan-500/30 transition-all duration-300 flex flex-col items-center sm:items-start text-center sm:text-left group"
+            >
+              <div className="font-display text-2xl sm:text-4xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-1 font-mono">
                 {value}{suffix}
-              </span>
-              <span className="text-slate-400 text-sm font-medium tracking-wide">{label}</span>
+              </div>
+              <div className="text-[10px] sm:text-xs font-medium text-slate-400 tracking-wide uppercase font-mono">
+                {label}
+              </div>
             </div>
           ))}
         </motion.div>

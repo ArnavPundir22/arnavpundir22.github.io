@@ -1,4 +1,43 @@
+# Robots.txt for Arnav Pundir Official Portfolio
+# https://arnavpundir22.github.io/
+
 User-agent: *
 Allow: /
 
+# Explicitly welcome AI Answer Engines & Search Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemaps & Machine-Readable AI Knowledge
 Sitemap: https://arnavpundir22.github.io/sitemap.xml
+# LLM Knowledge Graph: https://arnavpundir22.github.io/llms.txt

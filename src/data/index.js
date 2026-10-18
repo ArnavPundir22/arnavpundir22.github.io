@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Arnav Pundir',
-  tagline: 'Competitive Coding Lead @ D-Coders Squad | AI & Full-Stack Engineer',
+  tagline: 'AI Engineer & Full Stack Engineer | Competitive Coding Lead @ D-Coders Squad',
   location: 'Roorkee, India',
   email: 'arnavp128@gmail.com',
   phone: '+91 70606 75133',
@@ -8,25 +8,27 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/arnav-pundir128ap',
   dcoders: 'https://dcoderssquad.com',
   cvUrl: '/Documents/Arnav_Pundir_Comprehensive_Resume.pdf',
-  photo: '/images/man1.png',
-  photoAlt: 'Arnav Pundir - Competitive Coding Lead at D-Coders Squad & AI Engineer',
+  photo: '/images/man1.webp',
+  photoAlt: 'Arnav Pundir — AI Engineer & Full Stack Engineer',
   bio: [
-    "I am a Full-Stack Engineer, AI Specialist, and the Competitive Coding Lead at D-Coders Squad (the official student-led technical community of COER University, Roorkee). My work focuses on mentoring developers, organizing competitive programming initiatives, building intelligent systems, and engineering high-performance web applications. I specialize in delivering production-ready projects with React.js, Next.js, TypeScript, Node.js, and Python, including immersive 3D WebGL environments using Three.js, GSAP, and Framer Motion, as well as complex real-time video and multiplayer applications. Beyond technical leadership, I actively contribute to open-source software, having achieved Global Rank 70 in Nexus Spring of Code '26 with 13 Pull Requests merged across 5 repositories. Currently pursuing a B.Tech in Computer Science and Engineering at COER University, I am passionate about bridging the gap between algorithm optimization, robust software architecture, and modern web design."
+    "I am an exceptional AI Engineer & Full Stack Engineer specializing in high-throughput distributed architectures, real-time computer vision pipelines, and resilient offline-first web applications. With a foundation built on deep algorithmic optimization and modern full-stack engineering (React.js, Next.js 15, TypeScript, Node.js, and Python), I architect systems designed for low latency, zero-logging privacy, and high fault tolerance. My engineered platforms range from distributed forensic facial tracking and trajectory reconstruction (TraceAI) to local-first reactive project managers (ZeroLag with RxDB/Supabase) and real-time collaborative WebRTC video streaming (AuraMeet). Alongside building production software, I direct competitive programming and algorithmic masterclasses as the Competitive Coding Lead at D-Coders Squad (COER University), mentoring over 200 developers. An active open-source contributor, I secured Global Rank #70 in Nexus Spring of Code '26 with 13 merged pull requests across 5 production codebases."
   ],
   stats: [
-    { value: 13, suffix: '+', label: 'Projects Built' },
-    { value: 2, suffix: '+', label: 'Years Coding' },
-    { value: 10, suffix: '+', label: 'Tech Stacks' },
-    { value: 5, suffix: '', label: 'Certifications' },
+    { value: 18, suffix: '+', label: 'Systems Engineered' },
+    { value: 2, suffix: '+', label: 'Years Production Code' },
+    { value: 12, suffix: '+', label: 'Core Technologies' },
+    { value: 5, suffix: '', label: 'Verified Credentials' },
   ],
 }
 
 export const roles = [
+  'AI Engineer & Systems Architect',
+  'Full Stack Engineer (React, Next.js, Node)',
+  'AI & Full-Stack Systems Engineer',
+  'Distributed Systems & WebRTC Architect',
+  'Computer Vision & Forensic ML Specialist',
   'Competitive Coding Lead @ D-Coders Squad',
-  'Full-Stack Developer',
-  'AI & Computer Vision Engineer',
-  'Open-Source Contributor',
-  '3D WebGL Enthusiast',
+  'Open-Source Security Contributor (NSoC Global Rank #70)',
 ]
 
 export const experience = [
@@ -36,20 +38,20 @@ export const experience = [
     location: 'Roorkee, India',
     period: 'Aug 2024 – Present',
     description: [
-      'Serving as Competitive Coding Lead for D-Coders Squad, the official technical community of COER University, mentoring members in algorithm optimization and data structures.',
-      'Organizing competitive programming contests, code reviews, and technical workshops to foster engineering excellence across Web Dev, AI/ML, and Open Source.',
-      'Leading student teams in national coding challenges and collaborative open-source initiatives.'
+      'Direct the competitive programming division at D-Coders Squad, the official technical community of COER University, conducting rigorous masterclasses in algorithm design, asymptotic complexity analysis, and advanced Data Structures & Algorithms.',
+      'Architect automated coding contests, coordinate technical code reviews, mentor 200+ engineers across full-stack development, and co-led executive pilot sensitization sessions for the BioSecure AI attendance system in front of university leadership.',
+      'Lead university delegation teams in national hackathons, competitive coding tournaments, and collaborative research initiatives.'
     ]
   },
   {
-    title: 'Freelance Frontend Developer',
-    company: 'Client & Independent Projects',
+    title: 'AI & Full Stack Engineer',
+    company: 'SparkTech Web Solutions • Client & Independent Projects',
     location: 'Roorkee, India',
     period: 'Jan 2024 – Present',
     description: [
-      'Developed and deployed a responsive service-booking platform (SevaSetu) using React.js, translating client requirements into a modern, production-ready user interface.',
-      'Engineered two ultra-premium cinematic hotel websites (Hotel Pacific, Hotel Sachin) utilizing Three.js, GSAP, and Framer Motion for immersive 3D WebGL rendering and physics-based scroll animations.',
-      'Optimized frontend assets and implemented component lazy-loading, achieving 95+ Lighthouse performance and accessibility scores across all deployments.'
+      'Architected and deployed SevaSetu, a high-performance commercial service-booking platform built on React.js, Python (Flask), and RESTful microservices, serving 1,000+ active end-users with dynamic scheduling.',
+      'Engineered ultra-premium cinematic WebGL portals (Hotel Pacific, Hotel Sachin) utilizing Three.js, GSAP, and Framer Motion for hardware-accelerated 3D graphics and physics-driven scroll choreography.',
+      'Implemented route-level lazy loading, bundle chunking, and JSON-LD Technical SEO, cutting initial asset payload by 40%, accelerating FCP, and consistently maintaining 95+ Google Lighthouse scores across Performance, Accessibility, Best Practices, and SEO.'
     ]
   }
 ]
@@ -61,12 +63,74 @@ export const openSource = [
     period: 'Apr 2026 – Jun 2026',
     rank: 'Ranked #70',
     description: [
-      'Achieved Global Rank 70 by merging 13 Pull Requests across 5 repositories, specializing in production-grade backend security and frontend performance.',
-      'Migrated legacy authentication to secure, rotating HttpOnly cookie sessions and encrypted sensitive user data at rest utilizing Fernet cryptography.',
-      'Enhanced backend security by tightening CORS policies, and improved frontend UX by implementing server-side pagination, debounced searches, and loading skeletons.'
+      'Attained Global Rank #70 among international contributors in Nexus Spring of Code (NSoC \'26) by architecting 13 merged Pull Requests across 5 production-grade open-source codebases.',
+      'Hardened session security by implementing rotating HttpOnly cookie authentication and integrated Fernet symmetric encryption for sensitive user records at rest.',
+      'Eliminated cross-site request vectors with strict CORS policy enforcement, and elevated frontend responsiveness with server-side pagination, debounced query pipelines, and skeleton feedback.'
     ]
   }
 ]
+
+export const skillCategories = {
+  Languages: {
+    tag: 'Core Syntax & Logic',
+    skills: [
+      { name: 'C++', highlight: 'Competitive Programming / STL / DSA', level: 85 },
+      { name: 'Python', highlight: 'AI / CV Pipelines & Backend', level: 92 },
+      { name: 'TypeScript', highlight: 'Type-Safe Full-Stack Architecture', level: 85 },
+      { name: 'JavaScript (ES6+)', highlight: 'Modern Async, Canvas & DOM APIs', level: 90 },
+      { name: 'SQL', highlight: 'Relational Schemas & Query Optimization', level: 80 },
+    ]
+  },
+  'Frontend & 3D': {
+    tag: 'Interface Engineering',
+    skills: [
+      { name: 'React 19 & Next.js 15', highlight: 'App Router, Server Actions, SSR & SSG', level: 92 },
+      { name: 'Tailwind CSS', highlight: 'Fluid Design Systems & Glassmorphism', level: 92 },
+      { name: 'Three.js / WebGL', highlight: '3D Geometry, Lighting & Cameras', level: 78 },
+      { name: 'Framer Motion', highlight: 'Physics-Based Gesture & Scroll Animations', level: 88 },
+      { name: 'GSAP', highlight: 'ScrollTrigger Timelines & Orchestration', level: 80 },
+    ]
+  },
+  'AI & Computer Vision': {
+    tag: 'Intelligent Systems',
+    skills: [
+      { name: 'YOLOv8', highlight: 'Real-Time Object & Vehicle Tracking', level: 88 },
+      { name: 'InsightFace (ArcFace)', highlight: '512D Facial Embeddings & Cosine Search', level: 88 },
+      { name: 'OpenCV', highlight: 'Video Feeds & Image Matrix Processing', level: 90 },
+      { name: 'MediaPipe', highlight: 'Hand Landmarks & Gesture Recognition', level: 84 },
+      { name: 'TensorFlow / CNNs', highlight: 'Neural Classification & ASL Translation', level: 80 },
+      { name: 'Gemini API / LLMs', highlight: 'Natural Language Pipelines & Doc Assistant', level: 86 },
+    ]
+  },
+  'Backend & Real-Time': {
+    tag: 'System Architecture',
+    skills: [
+      { name: 'Node.js & Express', highlight: 'Event-Driven Services & REST APIs', level: 85 },
+      { name: 'Flask / FastAPI', highlight: 'High-Throughput ML Model Serving', level: 88 },
+      { name: 'WebRTC', highlight: 'P2P Media Streaming & Data Channels', level: 82 },
+      { name: 'Redis', highlight: 'In-Memory Pub/Sub & Ephemeral State', level: 80 },
+      { name: 'RxDB & WebSockets', highlight: 'Offline-First Local Storage & Realtime Sync', level: 85 },
+    ]
+  },
+  'Databases & Storage': {
+    tag: 'Persistence & Security',
+    skills: [
+      { name: 'Supabase (pgvector)', highlight: 'PostgreSQL Vector Search & RLS Security', level: 88 },
+      { name: 'PostgreSQL', highlight: 'Relational Modeling & Foreign Key Constraints', level: 82 },
+      { name: 'MongoDB', highlight: 'Document Stores & Aggregate Pipelines', level: 82 },
+      { name: 'MySQL', highlight: 'ACID Relational Storage & Indexing', level: 80 },
+    ]
+  },
+  'Tools & Engineering': {
+    tag: 'Workflow & Standards',
+    skills: [
+      { name: 'Git & GitHub', highlight: 'Collaborative PR Workflows & CI/CD', level: 90 },
+      { name: 'Linux / Bash', highlight: 'Process Management & Shell Automation', level: 85 },
+      { name: 'Vite & Bundlers', highlight: 'ESM Builds & Performance Optimization', level: 92 },
+      { name: 'Fernet Cryptography', highlight: 'Data Encryption at Rest & Security', level: 80 },
+    ]
+  }
+}
 
 export const skills = {
   Languages: [
@@ -105,93 +169,95 @@ export const skills = {
 
 export const projects = [
   {
+    id: 3,
+    title: 'Face Recognition Attendance Web System — BioSecure AI Biometric Platform',
+    description:
+      'A full-stack automated biometric attendance platform selected for an official COER University pilot run. Deployed InsightFace ArcFace 512D facial embeddings paired with Supabase pgvector search in PostgreSQL achieving 90%+ accuracy on live video feeds. Engineered a custom 3D Pose-Gated EWMA Embedding Drift Engine (α = 0.30) to monitor template aging and mitigate biometric degradation, multi-role access control (RBAC), automated SMTP alerts, and CSV exports.',
+    tags: ['Python', 'Flask', 'InsightFace (ArcFace)', 'Supabase (pgvector)', 'PostgreSQL', 'OpenCV'],
+    category: 'AI / CV',
+    github: 'https://github.com/ArnavPundir22/Face-Attendance-System-Web-Version',
+    live: null,
+    featured: true,
+    badge: 'Official COER University Pilot Run',
+    pilotHighlight: 'Selected for official COER University Executive Pilot Run — Sensitized & presented to senior university leadership for institutional attendance automation.',
+    image: '/images/insight-attend.webp',
+    imageAlt: 'Face Recognition Attendance Web System — BioSecure AI biometric platform interface',
+  },
+  {
     id: 18,
-    title: 'ZeroLag: Offline-First Collaborative Task Management',
-    description: 'A blazing-fast, local-first project management platform built with React, RxDB, and Supabase. Features a zero-latency UI with offline-first background sync, real-time collaboration with live cursors, AI-powered magic import via Gemini, and seamless 1-click video conferencing integration (AuraMeet). Fully functional as an installable PWA with premium mesh-gradient glassmorphism.',
-    tags: ['React', 'TypeScript', 'RxDB', 'Supabase', 'Clerk', 'Tailwind CSS'],
+    title: 'ZeroLag: Offline-First Collaborative Task Architecture',
+    description: 'A local-first, zero-latency collaborative project management architecture built on React 19, TypeScript, RxDB (IndexedDB), and Supabase PostgreSQL. Features optimistic state updates for instantaneous UI responsiveness, event-sourced background synchronization with Realtime WebSockets, Gemini Vision AI task parsing from whiteboard photos, and Clerk JWT + PostgreSQL Row Level Security (RLS). Fully installable as an offline-first PWA.',
+    tags: ['React 19', 'TypeScript', 'RxDB', 'Supabase (pg)', 'Clerk Auth', 'Tailwind CSS'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/ZeroLag',
     live: null,
     featured: true,
-    image: '/images/ZeroLag.png',
+    image: '/images/ZeroLag.webp',
     imageAlt: 'ZeroLag collaborative project management platform with offline-first architecture',
   },
   {
     id: 17,
-    title: 'Occasions Event Registration Platform',
+    title: 'Occasions — Enterprise Event Orchestration Platform',
     description:
-      'Engineered a full-stack event platform using Next.js 15 and TypeScript, supporting concurrent user traffic and dynamic event capacities for 500+ attendees. Secured platform routes by implementing role-based organizer/attendee authentication flows via NextAuth.js and MongoDB. Built robust search/filter algorithms with debouncing to reduce query latency by 40%, and developed automated CSV data export pipelines for organizers.',
+      'A production event orchestration platform built on Next.js 15, TypeScript, and MongoDB, handling concurrent user traffic and dynamic attendee capacities for 500+ participants. Features role-based access control (RBAC) via NextAuth.js, debounced search algorithms reducing query latency by 40%, and automated CSV analytics exports.',
     tags: ['Next.js 15', 'TypeScript', 'NextAuth.js', 'MongoDB', 'Tailwind CSS'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/Occassions',
     live: 'https://occassions.vercel.app',
     featured: true,
-    image: '/images/occassions.png',
+    image: '/images/occassions.webp',
     imageAlt: 'Occasions event management dashboard, tracking registrants, event capacity limits, and CSV export functionality.',
   },
   {
     id: 1,
-    title: 'AuraMeet Real-Time Video Chat App',
+    title: 'AuraMeet — Ephemeral Real-Time Video Streaming Suite',
     description:
-      'Architected a scalable real-time messaging and peer-to-peer video streaming application using Node.js, Express, WebRTC, and Redis. Features an "ephemeral" data lifecycle that automatically self-destructs chat logs upon disconnect. Recently engineered a real-time multiplayer Air Draw feature using the Canvas API for synchronized hand-tracked drawing over video feeds, and integrated a comprehensive dark-mode glassmorphic emoji gallery.',
+      'A scalable peer-to-peer WebRTC video communication suite with ephemeral in-memory Redis session management that automatically purges all chat and session logs upon disconnect. Features synchronized real-time Air Draw canvas collaboration using MediaPipe hand tracking for interactive whiteboarding over video feeds.',
     tags: ['Node.js', 'Express', 'WebRTC', 'Redis', 'Canvas API'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/AuraMeet',
     live: 'https://aurameet-88e9.onrender.com',
     featured: true,
-    image: '/images/AuraMeet.png',
+    image: '/images/AuraMeet.webp',
     imageAlt: 'AuraMeet Real-Time Video Chat App interface showing ephemeral video streams and chat.',
   },
   {
     id: 2,
-    title: 'TraceAI — Forensic Surveillance Intelligence Platform',
+    title: 'TraceAI — Multi-Camera Forensic Surveillance Intelligence',
     description:
-      'TraceAI is a real-time AI-powered forensic surveillance intelligence platform that identifies, tracks, and reconstructs the movement timeline of individuals across distributed CCTV/video sources using face recognition, person re-identification, temporal tracking, and event analytics.',
-    tags: ['Python', 'FastAPI', 'YOLOv8', 'HTML/CSS', 'OpenCV'],
+      'A distributed forensic surveillance intelligence platform engineering real-time multi-camera tracking and trajectory reconstruction. Combines YOLOv8 spatial object detection with InsightFace biometric embeddings to identify, track, and assemble temporal movement maps of individuals across distributed video streams.',
+    tags: ['Python', 'FastAPI', 'YOLOv8', 'InsightFace', 'OpenCV'],
     category: 'AI / CV',
     github: 'https://github.com/ArnavPundir22/TraceAI-Intelligent-Missing-Person-Suspect-Tracking-System',
     live: null,
     featured: true,
-    image: '/images/TraceAI.png',
-    imageAlt: 'TraceAI is a real-time AI-powered forensic surveillance intelligence platform that identifies, tracks, and reconstructs the movement timeline of individuals across distributed CCTV/video sources using face recognition, person re-identification, temporal tracking, and event analytics.',
-  },
-  {
-    id: 3,
-    title: 'Face Recognition Attendance Web System',
-    description:
-      'Full-stack web app using Flask backend with InsightFace encoding pipeline. Automates attendance via group photo upload, multi-face detection, confidence scores, and structured CSV logs.',
-    tags: ['Python', 'Flask', 'InsightFace', 'HTML/CSS', 'OpenCV'],
-    category: 'AI / CV',
-    github: 'https://github.com/ArnavPundir22/Face-Attendance-System-Web-Version',
-    live: null,
-    featured: true,
-    image: '/images/insight-attend.png',
-    imageAlt: 'InsightAttend — AI-Powered Smart Attendance System dashboard and face recognition demo',
+    image: '/images/TraceAI.webp',
+    imageAlt: 'TraceAI forensic surveillance intelligence platform multi-camera tracking interface',
   },
   {
     id: 4,
-    title: 'SevaSetu — Service Booking Platform',
+    title: 'SevaSetu — Production Service Booking Platform',
     description:
-      'Real-world client service website built with React.js and Flask backend. Delivered a fully responsive booking platform with smooth navigation, REST API integration, and live deployment.',
+      'A commercial service booking portal engineered with React.js, Tailwind CSS, and a Flask REST API. Delivered a fully responsive scheduling interface with calendar integration, localized service dispatch, and live production deployment maintaining 95+ Lighthouse scores.',
     tags: ['React.js', 'Flask', 'Tailwind CSS', 'REST API', 'MySQL'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/SevaSetu',
     live: 'https://sevasetu.app',
     featured: true,
-    image: '/images/sevasetu.png',
+    image: '/images/sevasetu.webp',
     imageAlt: 'SevaSetu — Service Booking Platform dashboard with calendar and map',
   },
   {
     id: 5,
-    title: 'Traffic Analysis System',
+    title: 'Traffic Analysis System — Aerial Computer Vision Engine',
     description:
-      'Real-time traffic monitoring using YOLOv8 for vehicle detection and counting. Supports multi-class detection, lane analysis, and generates structured traffic flow reports.',
+      'A real-time aerial computer vision engine leveraging YOLOv8 and OpenCV for automated vehicle detection, multi-class flow classification, and lane density analytics. Generates structured vehicle frequency reports for urban traffic planning.',
     tags: ['Python', 'YOLOv8', 'OpenCV', 'TensorFlow'],
     category: 'AI / CV',
     github: 'https://github.com/ArnavPundir22/Traffic_analysis-system',
     live: null,
     featured: true,
-    image: '/images/traffic-analysis.png',
+    image: '/images/traffic-analysis.webp',
     imageAlt: 'Traffic Analysis System — aerial highway view with AI vehicle detection bounding boxes',
   },
   {
@@ -204,7 +270,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/DocBot',
     live: null,
     featured: true,
-    image: '/images/docbot.png',
+    image: '/images/docbot.webp',
     imageAlt: 'DocBot — AI Documentation Assistant with chat interface and code panels',
   },
   {
@@ -217,7 +283,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Anti-Spoofing-',
     live: null,
     featured: false,
-    image: '/images/anti-spoofing.png',
+    image: '/images/anti-spoofing.webp',
     imageAlt: 'Anti-Spoofing System — real face verified vs printed photo rejected',
   },
   {
@@ -230,7 +296,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Air-Mouse',
     live: null,
     featured: false,
-    image: '/images/air-mouse.png',
+    image: '/images/air-mouse.webp',
     imageAlt: 'Air-Mouse — hand gesture control with MediaPipe landmark tracking',
   },
   {
@@ -243,8 +309,8 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Maya-Personal-Desktop-Voice-Assistant',
     live: null,
     featured: false,
-    image: '/images/devin-assistant.png',
-    imageAlt: 'Devin — Desktop Voice Assistant with audio waveform and GUI',
+    image: '/images/devin-assistant.webp',
+    imageAlt: 'Maya — Desktop Voice Assistant with audio waveform and GUI',
   },
   {
     id: 10,
@@ -256,7 +322,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/ASL-translator',
     live: null,
     featured: false,
-    image: '/images/asl-translator.png',
+    image: '/images/asl-translator.webp',
     imageAlt: 'ASL Translator — hand sign recognition with CNN neural network',
   },
   {
@@ -269,7 +335,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Voice2Code-Codio',
     live: null,
     featured: false,
-    image: '/images/voice2code.png',
+    image: '/images/voice2code.webp',
     imageAlt: 'Voice2Code — microphone audio waveform transforming into code',
   },
   {
@@ -282,7 +348,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/EmotionMusicApp',
     live: null,
     featured: false,
-    image: '/images/emotion-music.png',
+    image: '/images/emotion-music.webp',
     imageAlt: 'Emotion Music App — face emotion detection connected to music visualization',
   },
   {
@@ -295,7 +361,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/SHEro-Smart-Women-Safety-App',
     live: null,
     featured: false,
-    image: '/images/women-safety.png',
+    image: '/images/women-safety.webp',
     imageAlt: 'Smart Women Safety App — map with SOS alert and safety perimeter',
   },
   {
@@ -308,19 +374,19 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/Surgical-Tool-Detection-in-laparoscopy-video',
     live: null,
     featured: false,
-    image: '/images/surgical-tool.png',
+    image: '/images/surgical-tool.webp',
     imageAlt: 'Surgical Tool Detection — laparoscopy view with YOLO bounding boxes',
   },
   {
     id: 15,
     title: 'Air-Kalam',
-    description: 'Hand Guesture controlled whiteboard pen. use hand guesture to write/ draw without using any mouse or writting pad, just by moving fingers in front of the camera.',
+    description: 'Hand gesture-controlled whiteboard pen. Use hand gestures to write and draw without a mouse or drawing pad, simply by moving fingers in front of the camera.',
     tags: ['Web App', 'Vercel'],
     category: 'Full-Stack',
     github: 'https://github.com/ArnavPundir22/Air-Kalam-',
     live: 'https://air-kalam-7w7q.vercel.app/',
     featured: false,
-    image: '/images/air-kalam.png',
+    image: '/images/air-kalam.webp',
     imageAlt: 'Air-Kalam — hand gesture drawing with colorful glowing trails on virtual whiteboard',
   },
   {
@@ -332,7 +398,7 @@ export const projects = [
     github: 'https://github.com/ArnavPundir22/GitHub-City',
     live: 'https://arnavpundir22.github.io/GitHub-City/',
     featured: true,
-    image: '/images/github-city.png',
+    image: '/images/github-city.webp',
     imageAlt: 'GitHub City — 3D skyscraper city visualization of GitHub repositories',
   },
 ]

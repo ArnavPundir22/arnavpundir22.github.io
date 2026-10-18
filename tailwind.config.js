@@ -20,6 +20,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         display: ['Outfit', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       animation: {
         'aurora': 'aurora 20s linear infinite',
@@ -28,8 +29,8 @@ export default {
       },
       keyframes: {
         aurora: {
-          from: { backgroundPosition: '50% 50%, 50% 50%' },
-          to: { backgroundPosition: '350% 50%, 350% 50%' },
+          from: { backgroundPosition: '50% 50%, 50% 50%, 50% 50%' },
+          to: { backgroundPosition: '350% 50%, 350% 50%, 350% 50%' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
