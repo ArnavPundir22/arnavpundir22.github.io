@@ -9,9 +9,7 @@ import {
   GraduationCap, 
   ExternalLink,
   Sparkles,
-  Calendar,
-  MapPin,
-  ChevronRight
+  MapPin
 } from 'lucide-react'
 
 // Official brand SVG icons for verified certifications

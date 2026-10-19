@@ -1,8 +1,6 @@
 import { useState, useEffect, lazy, Suspense } from 'react'
-import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import LoadingScreen from './components/LoadingScreen'
 import ScrollPath from './components/ScrollPath'
 
 // Code-split below-the-fold sections for instant first paint and 0ms main thread blocking
@@ -49,6 +47,7 @@ export default function App() {
 
     return () => {
       if (observer) observer.disconnect()
+      window.removeEventListener('load-below-fold', triggerLoad)
       window.removeEventListener('scroll', triggerLoad)
       window.removeEventListener('pointerdown', triggerLoad)
       window.removeEventListener('keydown', triggerLoad)

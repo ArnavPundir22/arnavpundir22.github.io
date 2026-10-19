@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
 import { profile } from '../data'
 import { 
-  Mail, 
   Phone, 
   MapPin, 
   Clock, 

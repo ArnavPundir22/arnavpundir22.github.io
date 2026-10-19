@@ -1,5 +1,5 @@
 import { profile } from '../data'
-import { ArrowUp, Sparkles, ExternalLink } from 'lucide-react'
+import { ArrowUp, ExternalLink } from 'lucide-react'
 
 const GithubIcon = ({ className = "w-4 h-4" }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
