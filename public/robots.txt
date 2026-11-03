@@ -4,7 +4,7 @@
 User-agent: *
 Allow: /
 
-# Explicitly welcome AI Answer Engines & Search Crawlers
+# Explicitly welcome Search Engines & AI Answer Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -26,6 +26,12 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
@@ -38,6 +44,32 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-# Sitemaps & Machine-Readable AI Knowledge
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: ByteSpider
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemaps & Machine-Readable AI Knowledge Endpoints
 Sitemap: https://arnavpundir22.github.io/sitemap.xml
-# LLM Knowledge Graph: https://arnavpundir22.github.io/llms.txt
+# LLM Knowledge Profile: https://arnavpundir22.github.io/llms.txt
+# Deep Technical Specifications: https://arnavpundir22.github.io/llms-full.txt
+

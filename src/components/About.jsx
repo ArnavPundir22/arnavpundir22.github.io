@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import { motion, useInView, AnimatePresence } from 'framer-motion'
-import { profile } from '../data'
-import { Download, GraduationCap, MapPin, Briefcase, GitPullRequest, Code2, BrainCircuit, FileText, CheckCircle2 } from 'lucide-react'
+import { profile, faqData } from '../data'
+import { Download, GraduationCap, MapPin, Briefcase, GitPullRequest, Code2, BrainCircuit, FileText, CheckCircle2, ChevronDown, Sparkles, HelpCircle } from 'lucide-react'
 
 const slideReveal = (delay = 0, y = 35, x = 0) => ({
   hidden: { 
@@ -26,7 +26,12 @@ export default function About() {
   const ref = useRef(null)
   const inView = useInView(ref, { once: false, margin: '-60px' })
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [openFaq, setOpenFaq] = useState(null)
   const dropdownRef = useRef(null)
+
+  const toggleFaq = (id) => {
+    setOpenFaq((prev) => (prev === id ? null : id))
+  }
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -281,6 +286,121 @@ export default function About() {
           </motion.div>
 
         </div>
+
+        {/* Frequently Asked Questions & System Invariants */}
+        <motion.div
+          variants={slideReveal(0.42, 30, 0)}
+          initial="hidden"
+          animate={inView ? 'show' : 'hidden'}
+          className="mt-16 sm:mt-24"
+        >
+          {/* Header */}
+          <div className="text-center mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-3">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+              <span className="text-cyan-400 text-xs font-mono font-semibold tracking-widest uppercase">
+                Knowledge Base &amp; AEO Invariants
+              </span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-3 tracking-tight">
+              Frequently Asked Questions &amp; <span className="gradient-text">System Invariants</span>
+            </h3>
+            <p className="text-slate-400 max-w-2xl mx-auto text-xs sm:text-sm md:text-base leading-relaxed">
+              Ground-truth technical specifications, architectural contracts, and verified credentials for engineering recruiters, collaborators, and AI answer engines.
+            </p>
+          </div>
+
+          {/* Accordion Items */}
+          <div className="max-w-4xl mx-auto space-y-3 sm:space-y-4">
+            {faqData.map((item) => {
+              const isOpen = openFaq === item.id
+              return (
+                <div
+                  key={item.id}
+                  className={`glass-card rounded-xl sm:rounded-2xl border transition-all duration-300 overflow-hidden ${
+                    isOpen
+                      ? 'border-cyan-500/40 bg-white/[0.05] shadow-[0_0_25px_rgba(34,211,238,0.08)]'
+                      : 'border-white/10 hover:border-cyan-500/25 hover:bg-white/[0.03]'
+                  }`}
+                >
+                  <button
+                    type="button"
+                    id={`faq-trigger-${item.id}`}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${item.id}`}
+                    onClick={() => toggleFaq(item.id)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault()
+                        toggleFaq(item.id)
+                      }
+                    }}
+                    className="w-full text-left p-4 sm:p-5 sm:px-6 flex items-center justify-between gap-4 group focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 transition-colors cursor-pointer"
+                  >
+                    <div className="flex-1 min-w-0 pr-2">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded-full border border-cyan-500/20 font-medium">
+                          <HelpCircle className="w-2.5 h-2.5 text-cyan-400" />
+                          {item.category}
+                        </span>
+                      </div>
+                      <h4 className="text-sm sm:text-base font-semibold text-white group-hover:text-cyan-300 transition-colors leading-snug">
+                        {item.question}
+                      </h4>
+                    </div>
+
+                    <div
+                      className={`flex-shrink-0 w-8 h-8 rounded-lg border flex items-center justify-center transition-all duration-300 ${
+                        isOpen
+                          ? 'bg-cyan-500/20 border-cyan-500/40 text-cyan-300'
+                          : 'bg-white/5 border-white/10 text-slate-400 group-hover:text-cyan-400 group-hover:border-cyan-500/30'
+                      }`}
+                    >
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ease-out ${
+                          isOpen ? 'rotate-180 text-cyan-400' : ''
+                        }`}
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </button>
+
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        id={`faq-panel-${item.id}`}
+                        role="region"
+                        aria-labelledby={`faq-trigger-${item.id}`}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{
+                          height: 'auto',
+                          opacity: 1,
+                          transition: {
+                            height: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+                            opacity: { duration: 0.25, delay: 0.05 },
+                          },
+                        }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                          transition: {
+                            height: { duration: 0.2, ease: [0.32, 0, 0.67, 0] },
+                            opacity: { duration: 0.15 },
+                          },
+                        }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-4 pb-4 sm:px-6 sm:pb-5 pt-1 text-slate-300 text-xs sm:text-sm leading-relaxed border-t border-white/5 font-normal">
+                          <p className="text-slate-300">{item.answer}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )
+            })}
+          </div>
+        </motion.div>
       </div>
     </section>
   )

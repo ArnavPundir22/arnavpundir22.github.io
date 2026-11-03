@@ -474,3 +474,54 @@ export const certifications = [
     verificationUrl: 'https://learn.microsoft.com/en-us/users/arnavpundir-7070/achievements?tab=tab-learning-paths',
   },
 ]
+
+export const faqData = [
+  {
+    id: 1,
+    category: 'Engineering Philosophy',
+    question: "What are Arnav Pundir's core areas of technical expertise and engineering philosophy?",
+    answer: "Arnav Pundir is an AI & Full-Stack Systems Engineer specializing in real-time computer vision (YOLOv8, InsightFace), zero-latency local-first web architectures (RxDB, Supabase), and low-latency WebRTC media streaming. His engineering philosophy adheres strictly to algorithmic efficiency, clean data-flow contracts, and zero defensive bloat — prioritizing sub-millisecond execution, offline durability, and 95+ Google Lighthouse scores across production deployments."
+  },
+  {
+    id: 2,
+    category: 'Biometrics & Computer Vision',
+    question: 'What is BioSecure AI and how does its face recognition architecture function?',
+    answer: 'BioSecure AI is an advanced production-grade automated biometric attendance platform selected for an official COER University pilot run across 1,126+ students. The architecture extracts 512-dimensional ArcFace facial embeddings from video streams and performs vector matching in Supabase pgvector (PostgreSQL) using sub-millisecond CPU BLAS matrix dot products with 90%+ recognition accuracy. To combat template aging and drift, it incorporates a custom 3D Pose-Gated EWMA Embedding Drift Engine (alpha = 0.30), paired with multi-role RBAC access control, automated SMTP notifications, and CSV analytics.'
+  },
+  {
+    id: 3,
+    category: 'Local-First Architecture',
+    question: 'How does ZeroLag achieve zero server-roundtrip reactivity for local-first applications?',
+    answer: 'ZeroLag delivers 0ms perceived mutation latency by executing all state changes against client-side IndexedDB using RxDB reactive observables within a React 19 and TypeScript architecture. Background replication to Supabase PostgreSQL occurs asynchronously over event-sourced WebSockets using Lamport timestamp conflict resolution. It also features Gemini 1.5 Vision API integration to ingest whiteboard photos into topologically sorted Kanban tasks, operating as an installable offline Progressive Web App (PWA).'
+  },
+  {
+    id: 4,
+    category: 'Community Leadership',
+    question: 'What leadership and community engineering roles has Arnav Pundir held?',
+    answer: 'Arnav serves as the Competitive Coding Lead at D-Coders Squad, the official technical community of COER University. In this role, he designs algorithmic problem sets, directs competitive programming workshops, conducts system architecture reviews, and mentors a community of 200+ engineers in Data Structures, Algorithms, and production development. He also co-directed the executive technical demonstration of the BioSecure AI platform before senior university leadership.'
+  },
+  {
+    id: 5,
+    category: 'Academics & Honors',
+    question: 'What academic background, competitive programming ratings, and honors does Arnav Pundir hold?',
+    answer: "Arnav is pursuing a Bachelor of Technology in Computer Science & Engineering (2024–2028) at COER University, Roorkee. In open-source and algorithmic competitions, he achieved Global Rank #70 in Nexus Spring of Code 2026 (NSoC '26) with 13 merged PRs across 5 codebases, is an accepted contributor for GirlScript Summer of Code 2026 (GSSoC '26), ranks in the top 15.6% globally on LeetCode with 350+ solved problems, and holds professional certifications from Google Cloud, Microsoft Azure AI, and GitHub."
+  },
+  {
+    id: 6,
+    category: 'Machine Learning & Systems',
+    question: 'What machine learning, deep learning, and computer vision systems has Arnav built?',
+    answer: 'Arnav has engineered 18+ high-impact software systems, including TraceAI (distributed forensic surveillance platform reconstructing cross-camera trajectories with YOLOv8 and InsightFace), BioSecure AI (512D ArcFace facial attendance system with 3D pose gating), Anti-Spoofing System (dual-stream liveness detection using FFT texture analysis and blink verification), Traffic Analysis System (real-time vehicle flow classification and lane density estimation), Air-Mouse and Air-Kalam (touchless MediaPipe hand tracking interfaces), ASL Translator (CNN gesture classification with >92% accuracy), and Surgical Tool Detection (YOLOv8 laparoscopy instrument tracking).'
+  },
+  {
+    id: 7,
+    category: 'Production Architecture Stack',
+    question: "What full-stack and cloud technologies form Arnav's production architecture stack?",
+    answer: "Arnav's production stack encompasses modern frontend systems (React 19, Next.js 15, TypeScript, Tailwind CSS, Three.js/WebGL, Framer Motion), backend runtimes (Node.js/Express, Python/Flask, FastAPI), low-latency networking (WebRTC mesh streaming, Redis in-memory session management), database persistence (PostgreSQL, Supabase pgvector, MongoDB, MySQL, RxDB/IndexedDB), and security layers (Clerk JWT, Row Level Security, Fernet symmetric cryptography, HttpOnly cookie rotation)."
+  },
+  {
+    id: 8,
+    category: 'Career & Contact',
+    question: 'How can engineering recruiters, collaborators, and clients get in touch with Arnav?',
+    answer: 'Arnav is available for software engineering internships, AI engineering roles, and full-stack systems engineering opportunities worldwide. Based in Roorkee, Uttarakhand, India (IST, UTC+5:30), he is open to remote roles and relocation. Engineering recruiters and collaborators can reach him via email at arnavp128@gmail.com, telephone at +91 70606 75133, LinkedIn at linkedin.com/in/arnav-pundir128ap, or inspect his open-source systems on GitHub at github.com/ArnavPundir22.'
+  },
+]

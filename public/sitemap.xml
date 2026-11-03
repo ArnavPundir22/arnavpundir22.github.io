@@ -3,29 +3,134 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://arnavpundir22.github.io/</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://arnavpundir22.github.io/images/man1.webp</image:loc>
+      <image:title>Arnav Pundir — AI Engineer &amp; Full Stack Engineer</image:title>
+      <image:caption>Official portrait of Arnav Pundir, Competitive Coding Lead at D-Coders Squad</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/insight-attend.webp</image:loc>
+      <image:title>BioSecure AI — Face Recognition Attendance Web Platform</image:title>
+      <image:caption>Automated biometric attendance platform with InsightFace 512D ArcFace embeddings and Supabase pgvector</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/ZeroLag.webp</image:loc>
+      <image:title>ZeroLag — Offline-First Collaborative Task Architecture</image:title>
+      <image:caption>Local-first zero-latency task management system with RxDB IndexedDB caching and Supabase real-time sync</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/occassions.webp</image:loc>
+      <image:title>Occasions — Enterprise Event Orchestration Platform</image:title>
+      <image:caption>Full-stack event orchestration platform built on Next.js 15, TypeScript, and MongoDB</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/AuraMeet.webp</image:loc>
+      <image:title>AuraMeet — Ephemeral Real-Time Video Streaming Suite</image:title>
+      <image:caption>Peer-to-peer WebRTC video streaming suite with in-memory Redis session management and MediaPipe hand tracking</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/TraceAI.webp</image:loc>
+      <image:title>TraceAI — Multi-Camera Forensic Surveillance Intelligence</image:title>
+      <image:caption>Forensic surveillance platform with YOLOv8 object detection and InsightFace biometric embeddings for trajectory reconstruction</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/sevasetu.webp</image:loc>
+      <image:title>SevaSetu — Production Service Booking Platform</image:title>
+      <image:caption>Commercial service booking portal engineered with React.js, Tailwind CSS, and Flask REST API</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/traffic-analysis.webp</image:loc>
+      <image:title>Traffic Analysis System — Aerial Computer Vision Engine</image:title>
+      <image:caption>Aerial vehicle detection, multi-class flow classification, and lane density analytics using YOLOv8 and OpenCV</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/docbot.webp</image:loc>
+      <image:title>DocBot — AI Documentation Assistant</image:title>
+      <image:caption>Documentation summarization and natural language Q&amp;A assistant built with Gemini API and PyQt5</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/anti-spoofing.webp</image:loc>
+      <image:title>Anti-Spoofing System — Real-Time Liveness Detection</image:title>
+      <image:caption>Facial anti-spoofing liveness detection engine using OpenCV and TensorFlow to prevent spoof attacks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/air-mouse.webp</image:loc>
+      <image:title>Air-Mouse — Hand Gesture Cursor Control</image:title>
+      <image:caption>Real-time touchless cursor navigation and click control using MediaPipe hand landmark tracking</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/devin-assistant.webp</image:loc>
+      <image:title>Maya — Personal Desktop Voice Assistant</image:title>
+      <image:caption>Voice-controlled desktop automation assistant with speech recognition and PyQt5 graphical interface</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/asl-translator.webp</image:loc>
+      <image:title>ASL Translator — American Sign Language CNN Recognition</image:title>
+      <image:caption>Real-time sign language gesture classification from webcam feeds using convolutional neural networks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/voice2code.webp</image:loc>
+      <image:title>Voice2Code — Codio Voice Programming Tool</image:title>
+      <image:caption>Real-time spoken programming instruction conversion to executable code using NLP pipelines</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/emotion-music.webp</image:loc>
+      <image:title>Emotion Music App — Mood-Based Audio Player</image:title>
+      <image:caption>Webcam emotion detection using DeepFace with intelligent personalized music playlist playback</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/women-safety.webp</image:loc>
+      <image:title>SHEro — Smart Women Safety Application</image:title>
+      <image:caption>Emergency SOS response and real-time geolocation sharing web application built with Flask</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/surgical-tool.webp</image:loc>
+      <image:title>Surgical Tool Detection in Laparoscopy Video</image:title>
+      <image:caption>Real-time medical video inference and surgical instrument detection using YOLOv8</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/air-kalam.webp</image:loc>
+      <image:title>Air-Kalam — Hand Gesture Virtual Whiteboard</image:title>
+      <image:caption>Touchless virtual drawing and whiteboard pen controlled via camera finger movement tracking</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://arnavpundir22.github.io/images/github-city.webp</image:loc>
+      <image:title>GitHub City — 3D Living Skyscraper Portfolio Visualizer</image:title>
+      <image:caption>Procedural 3D skyscraper city visualizing GitHub repository commit history using React and Three.js</image:caption>
     </image:image>
   </url>
   <url>
+    <loc>https://arnavpundir22.github.io/llms.txt</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://arnavpundir22.github.io/llms-full.txt</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://arnavpundir22.github.io/Documents/Arnav_Pundir_Comprehensive_Resume.pdf</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://arnavpundir22.github.io/Documents/Arnav_Pundir_FullStack_Resume.pdf</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://arnavpundir22.github.io/Documents/Arnav_Pundir_AI_Resume.pdf</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
+
